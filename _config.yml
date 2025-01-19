@@ -1,0 +1,31 @@
+title: Website Title
+description: Meta description
+# timezone: UTC
+# collections:
+#   posts:
+#     title: Posts
+#     output: true
+#     permalink: /:categories/:title
+#   uploads:
+#     title: Uploads
+#     output: true
+baseurl: ''
+# url: https://your-domain.com
+permalink: pretty
+highlighter: rouge
+sass:
+    style: compressed
+    sourcemap: always
+plugins:
+- jekyll-feed
+exclude:
+- ".sass-cache/"
+- ".jekyll-cache/"
+- gemfiles/
+- Gemfile
+- Gemfile.lock
+- node_modules/
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
