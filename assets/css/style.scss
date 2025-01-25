@@ -2,9 +2,28 @@
 ---
 
 $brand: #1928aa;
+$text-primary: #152722;
+$container: 1470px;
 
 body {
   font-family: Manrope, sans-serif;
+  color: $text-primary;
+}
+
+.primary {
+  color: $text-primary;
+}
+
+.container, .container-ns {
+  max-width: $container;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.brand {
+  color: $brand;
 }
 
 .bg-brand {
@@ -32,6 +51,10 @@ nav {
       color: white; // Override the color for bg-brand links
     }
   }
+}
+
+a {
+  color: $brand;
 }
 
 .pa2-5 {
@@ -66,8 +89,36 @@ nav {
     z-index: 10;
   }
 }
+hr {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid rgba($brand, 0.2);
+}
 
-@media screen and (max-width: 1070px) {
+footer h3 {
+  font-family: "JetBrains Mono";
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* TACHYONS -NS */
+@media (max-width: 50em) {
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .container-ns {
+    max-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+// CUSTOM BREAKPOINTS
+@media screen and (max-width: 1010px) {
   nav {
     position: relative;
   }
