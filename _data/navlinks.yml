@@ -1,0 +1,13 @@
+- title: εταιρεια
+  url: /company
+- title: πολιτικη ποιοτητας
+  url: /quality-policy
+- title: υπηρεσιες
+  url: /services
+- title: νεα
+  url: /news
+- title: ληψεις
+  url: /downloads
+- title: επικοινωνια
+  url: /contact
+  class: pa2-5 bg-brand

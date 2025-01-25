@@ -1,26 +1,41 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{{ site.title }} | {{ page.title }}</title>
 
-<meta content="{% if page.description %}{{page.description}}{%else%}{{site.description}}{% endif %}" name="description">
-<meta content="{{ site.title }} | {{ page.title }}" property="og:title">
-<meta content="{% if page.description %}{{page.description}}{%else%}{{site.description}}{% endif %}" property="og:description">
-<meta content="{{ site.title }} | {{ page.title }}" property="twitter:title">
-<meta content="{% if page.description %}{{page.description}}{%else%}{{site.description}}{% endif %}" property="twitter:description">
-<meta property="og:type" content="website">
-<meta property="og:image" content="{% if page.banner %}{{site.url}}{{page.banner}}{%else%}{{site.url}}/assets/meta/an-og.jpg?v=2{% endif %}">
-<meta content="summary_large_image" name="twitter:card">
-<meta property="twitter:image" content="{% if page.banner %}{{site.url}}{{page.banner}}{%else%}{{site.url}}/assets/meta/an-og.jpg?v=2{% endif %}">
+<meta
+  content="{% if page.description %}{{page.description}}{%else%}{{site.description}}{% endif %}"
+  name="description"
+/>
+<meta content="{{ site.title }} | {{ page.title }}" property="og:title" />
+<meta
+  content="{% if page.description %}{{page.description}}{%else%}{{site.description}}{% endif %}"
+  property="og:description"
+/>
+<meta content="{{ site.title }} | {{ page.title }}" property="twitter:title" />
+<meta
+  content="{% if page.description %}{{page.description}}{%else%}{{site.description}}{% endif %}"
+  property="twitter:description"
+/>
+<meta property="og:type" content="website" />
+<meta
+  property="og:image"
+  content="{% if page.banner %}{{site.url}}{{page.banner}}{%else%}{{site.url}}/assets/meta/an-og.jpg?v=2{% endif %}"
+/>
+<meta content="summary_large_image" name="twitter:card" />
+<meta
+  property="twitter:image"
+  content="{% if page.banner %}{{site.url}}{{page.banner}}{%else%}{{site.url}}/assets/meta/an-og.jpg?v=2{% endif %}"
+/>
 <!-- <link href="/assets/meta/favicon-32.png" rel="shortcut icon" type="image/x-icon"> -->
 <!-- <link href="/assets/meta/favicon-256.png" rel="apple-touch-icon"> -->
 
-<link rel="stylesheet" href="/assets/css/tachyons.css">
-<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="/assets/css/tachyons.css" />
+<link rel="stylesheet" href="/assets/css/style.css" />
 
 {% include analytics.html %}
 
 <script>
-    /* to prevent Firefox FOUC */
-    let FF_FOUC_FIX;
+  /* to prevent Firefox FOUC */
+  let FF_FOUC_FIX;
 </script>
