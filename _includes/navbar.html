@@ -1,16 +1,21 @@
 <div class="container-ns">
   <nav class="flex items-center justify-between pl3 pl0-ns">
-    <div class="flex w5 mr3">
+    <a href="/" class="flex w5 mr3 grow">
       <img
         src="/assets/images/cid-logo.svg"
         alt="CID Logo"
         width="302"
         height="37"
       />
-    </div>
+    </a>
     <div class="navlinks">
       {% for link in site.data.navlinks %}
-      <a href="{{ link.url }}" class="{{ link.class }}"> {{ link.title }} </a>
+      <a
+        href="{{ link.url }}"
+        class="hover-black underline-hover {{ link.class }}"
+      >
+        {{ link.title }}
+      </a>
       {% endfor %}
     </div>
     <a href="/menu" class="pa2-5 bg-brand menu link" role="button">menu</a>
@@ -20,5 +25,4 @@
       {% endfor %}
     </div>
   </nav>
-  
 </div>

@@ -3,6 +3,7 @@
 
 $brand: #1928aa;
 $text-primary: #152722;
+$text-secondary: #415651;
 $container: 1470px;
 
 body {
@@ -14,7 +15,12 @@ body {
   color: $text-primary;
 }
 
-.container, .container-ns {
+.secondary {
+  color: $text-secondary;
+}
+
+.container,
+.container-ns {
   max-width: $container;
   padding-left: 32px;
   padding-right: 32px;
@@ -103,7 +109,6 @@ footer h3 {
 
 /* TACHYONS -NS */
 @media (max-width: 50em) {
-
   .container {
     padding-left: 16px;
     padding-right: 16px;
@@ -114,7 +119,23 @@ footer h3 {
     padding-left: 0;
     padding-right: 0;
   }
+}
 
+// utility classes
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.border-bottom-brand {
+  border-bottom: 1px solid $brand;
+}
+
+.border-button-brand {
+  border: 1.5px solid $brand;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 // CUSTOM BREAKPOINTS
