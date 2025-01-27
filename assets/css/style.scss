@@ -5,6 +5,7 @@ $brand: #1928aa;
 $text-primary: #152722;
 $text-secondary: #415651;
 $container: 1470px;
+$bg-secondary: #F5F8F5;
 
 body {
   font-family: Manrope, sans-serif;
@@ -130,6 +131,10 @@ footer h3 {
 .gap2 { gap: .5rem; }
 .gap3 { gap: 1rem; }
 .gap4 { gap: 1.5rem; }
+
+.bg-secondary {
+  background-color: $bg-secondary;
+}
 
 
 .mono {
