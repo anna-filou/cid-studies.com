@@ -1,0 +1,24 @@
+<section class="container pv5">
+  <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb5">
+    <h2 class="f2 fw5 mv0">{{ site.data.sectors.title }}</h2>
+    <div class="dn db-l flex-auto bg-black-10" style="height: 1px"></div>
+    <a href="" class="link dim b pb2 bb bw2 b--brand nowrap">
+      {{ site.data.sectors.view_all_link }}
+    </a>
+  </div>
+  <div>
+    <div class="flex flex-row-l flex-column gap4">
+      {% for sector in site.data.sectors.sectors %}
+      <div class="w-100">
+        <div
+          class="aspect-ratio aspect-ratio--4x3 w-100"
+          style="background-image: url('{{ sector.image }}'); background-size: cover; background-position: center;"
+        ></div>
+        <div class="ph4 pt4 pb4 bg-secondary">
+          <h3 class="fw4 ma0 mb2 lh-title">{{ sector.title }}</h3>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

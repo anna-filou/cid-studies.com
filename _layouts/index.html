@@ -8,11 +8,9 @@ layout: default
     <h1 class="f3 f2-ns brand fw5 mt0-l mb4 lh-title">
       {{ site.data.hero.title }}
     </h1>
-    
-    <p class="lh-copy mv0 secondary">
-      {{ site.data.hero.description }}
-    </p>
-  
+
+    <p class="lh-copy mv0 secondary">{{ site.data.hero.description }}</p>
+
     <div class="flex items-center flex-wrap mv4">
       <a
         href="{{ site.data.hero.cta_url }}"
@@ -25,16 +23,15 @@ layout: default
         >{{ site.data.hero.company_text }}</a
       >
     </div>
-
   </div>
-
-  
 
   <div class="w-100 w-50-l">
-    <div class="h5 h-100-l cover bg-center" style="background-image: url('/assets/images/hero-image.png')"></div>
+    <div
+      class="h5 h-100-l cover bg-center"
+      style="background-image: url('/assets/images/hero-image.png')"
+    ></div>
   </div>
 </section>
-
 
 <div class="container bg-yellow">
   <div class="pa2 dn-ns">Mobile Default</div>
@@ -42,7 +39,4 @@ layout: default
   <div class="pa2 dn db-l">Desktop -L</div>
 </div>
 
-{% include services.html %}
-
-{% include cta.html %}
-
+{% include services.html %} {% include cta.html %} {% include sectors.html %}
