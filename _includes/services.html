@@ -1,0 +1,40 @@
+<section class="container pv5">
+  <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb5">
+    <h2 class="f2 fw5 mv0">{{ site.data.services.title }}</h2>
+    <div class="dn db-l flex-auto bg-black-10" style="height: 1px;"></div>
+    {% if site.data.services.cta_link %}
+      <a href="{{ site.data.services.cta_link }}" class="link dim b pb2 bb bw2 b--brand nowrap">
+        {{ site.data.services.cta_text }}&nbsp;→
+      </a>
+    {% endif %}
+  </div>
+
+  <div class="flex flex-wrap nl3 nr3">
+    {% for service in site.data.services.items %}
+      <div class="w-100 w-third-l ph3 mb4">
+        <div class="pb4">
+          <span class="secondary">{{ forloop.index | prepend: '0' }}</span>
+        </div>
+        
+        <div class="colored-divider {{ service.color_class | default: 'bg-brand' }} mb4"></div>
+        <h3 class="f3 fw5 mt0 mb3">
+          {% if service.link %}
+            <a href="{{ service.link }}" class="link primary lh-title dim">
+              {{ service.title }}&nbsp;→
+            </a>
+          {% else %}
+            {{ service.title }}
+          {% endif %}
+        </h3>
+
+        <ul class="lh-copy secondary list pl0">
+          {% for detail in service.details %}
+            <li class="mb2">
+              {{ detail }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</section>

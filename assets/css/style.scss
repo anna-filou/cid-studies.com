@@ -121,7 +121,17 @@ footer h3 {
   }
 }
 
+.colored-divider {
+  height: 4px;
+}
+
 // utility classes
+
+.gap2 { gap: .5rem; }
+.gap3 { gap: 1rem; }
+.gap4 { gap: 1.5rem; }
+
+
 .mono {
   font-family: "JetBrains Mono", monospace;
 }
