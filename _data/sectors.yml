@@ -1,0 +1,9 @@
+title: "Τομείς"
+view_all_link: "Δείτε αναλυτικά"
+sectors:
+  - image: "/assets/images/card-1.png"
+    title: "Εγκαταστάσεις Επεξεργασίας Λυμάτων (Bιολογικοί Καθαρισμοί)"
+  - image: "/assets/images/card-2.png"
+    title: "Αντλιοστάσια και εγκαταστάσεις αποχετευτικών δικτύων"
+  - image: "/assets/images/card-3.png"
+    title: "Εγκαταστάσεις επεξεργασίας βιομηχανικών αποβλήτων"
