@@ -10,7 +10,7 @@
   </div>
 
   <div class="flex flex-wrap nl3 nr3">
-    {% for service in site.data.services.items %}
+    {% for service in site.services %}
       <div class="w-100 w-third-l ph3 mb4">
         <div class="pb4">
           <span class="secondary">{{ forloop.index | prepend: '0' }}</span>
@@ -18,13 +18,9 @@
         
         <div class="colored-divider {{ service.color_class | default: 'bg-brand' }} mb4"></div>
         <h3 class="f3 fw5 mt0 mb3">
-          {% if service.link %}
-            <a href="{{ service.link }}" class="link primary lh-title dim">
+            <a href="{{ service.url }}" class="link primary lh-title dim">
               {{ service.title }}&nbsp;→
             </a>
-          {% else %}
-            {{ service.title }}
-          {% endif %}
         </h3>
 
         <ul class="lh-copy secondary list pl0">

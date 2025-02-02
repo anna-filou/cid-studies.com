@@ -1,16 +1,13 @@
 title: CID | Chemical Infrastructure Development Studies
 description: Meta description
 # timezone: UTC
-# collections:
-#   posts:
-#     title: Posts
-#     output: true
-#     permalink: /:categories/:title
-#   uploads:
-#     title: Uploads
-#     output: true
+collections:
+  services:
+    title: Services
+    output: true
+    permalink: /services/:title
 baseurl: ''
-# url: https://your-domain.com
+url: https://cid-studies.com
 permalink: pretty
 highlighter: rouge
 sass:
