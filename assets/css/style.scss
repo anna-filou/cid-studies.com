@@ -20,6 +20,9 @@ body {
   color: $text-secondary;
 }
 
+.b--brand {
+  border-color: $brand;
+}
 .container,
 .container-ns {
   max-width: $container;
@@ -162,6 +165,23 @@ footer h3 {
   object-fit: cover;
 }
 
+article {
+  &h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $brand;
+    font-weight: 500;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
 // CUSTOM BREAKPOINTS
 @media screen and (max-width: 1010px) {
   nav {
@@ -181,4 +201,10 @@ footer h3 {
   .menu-open a {
     border-bottom: 1px solid rgba($brand, 0.2);
   }
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 2rem;
+  padding-right: 2rem;
 }
