@@ -14,3 +14,29 @@ layout: default
     {{ content }}
   </article>
 </section>
+
+<section class="container pv5 bg-secondary bt b--brand">
+<div class="flex flex-wrap nl3 nr3">
+    {% for service in site.services %}
+      {% if service.title != page.title %}
+      <div class="w-100 w-50-l ph3 mb4 mb0-ns">
+        
+        <div class="colored-divider {{ service.color_class | default: 'bg-brand' }} mb4"></div>
+        <h3 class="f3 fw5 mt0 mb3">
+            <a href="{{ service.url }}" class="link primary lh-title dim">
+              {{ service.title }}&nbsp;→
+            </a>
+        </h3>
+
+        <ul class="lh-copy secondary list pl0">
+          {% for detail in service.details %}
+            <li class="mb2">
+              {{ detail }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
