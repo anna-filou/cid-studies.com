@@ -4,26 +4,28 @@ layout: default
 
 <section class="pv5 container flex flex-column flex-row-l gap5">
     <div class="items-start w-50">
-        <h2 class="f1 fw4 ma0 brand">Νέα</h2>
+        <h2 class="f1 fw4 ma0 brand">{{site.data.news.title}}</h2>
     </div>
     <div class="w-50">
-        <p class="lh-copy pt3 pb3">Σας βοηθάμε να βελτιστοποιήσετε τις διαδικασίες επεξεργασίας νερού και να διαχειριστείτε τη μονάδα σας με πιο αποτελεσματικό και βιώσιμο τρόπο ενόψει των ολοένα και πιο αυστηρών κανονισμών και των κοστολογικών απαιτήσεων.</p>
+        <p class="lh-copy pt3 pb3">{{site.data.news.description}}</p>
         <a class="b-brand bb bw2 pb2 dim link nowrap mono b" href="https://google.com">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ →</a>
     </div>
 </section>
 
 <section class="container pv5">
 
+{% for post in site.data.news.posts %}
     <div class="mb5 bg-secondary pa4">
         <div class="flex flex-column flex-row-l items-start items-center-l gap3">
-            <div class="f4 fw5 secondary o-50 w4">03/02/2025</div>
-            <h2 class="f3 fw5 ma0">Όλα όσα πρέπει να ξέρετε για τους νέους περιβαλλοντικούς κανονισμούς της ΕΕ</h2>
+            <div class="f4 fw5 secondary o-50 w4">{{post.date}}</div>
+            <h2 class="f3 fw5 ma0">{{post.title}}</h2>
             <div class="dn db-l flex-auto bg-black-10 bar"></div>
-            <a class="b-brand bb bw2 pb2 link b dim nowrap" href="https://google.com">example.com -></a>
+            <a class="b-brand bb bw2 pb2 link b dim nowrap" href="{{post.link}}">{{post.link_text}}</a>
         </div>
         <div class="fw5 secondary lh-copy list flex flex-column flex-row-l items-start items-center-l gap3">
             <div class="w4 flex-shrink-0"></div>
-            <p>Σας βοηθάμε να βελτιστοποιήσετε τις διαδικασίες επεξεργασίας νερού και να διαχειριστείτε τη μονάδα σας με πιο αποτελεσματικό και βιώσιμο τρόπο ενόψει των ολοένα και πιο αυστηρών κανονισμών.</p>
+            <p>{{post.description}}</p>
         </div>
     </div>
+    {% endfor %}
 </section>
