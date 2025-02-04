@@ -3,29 +3,33 @@ layout: default
 ---
 
 <section class="pv5 container flex flex-column flex-row-l gap5">
-    <div class="items-start w-50">
+    <div class="items-start w-50-l w-100">
         <h2 class="f1 fw4 ma0 brand">{{site.data.sectors.title}}</h2>
     </div>
-    <div class="w-50">
+    <div class="w-50-l w-100">
         <p class="lh-copy pt3 pb3">{{site.data.sectors.description}}</p>
         <a class="b-brand bb bw2 pb2 dim link nowrap mono b" href="https://google.com">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ →</a>
     </div>
 </section>
 
-<section class="bg-secondary">
+<section>
 
   {% for sector in site.data.sectors.sectors %}
     <div class="{% assign is_even = forloop.index0 | modulo: 2 %}{% if is_even == 0 %}bg-secondary{% endif %}">
-    <div class="container pv5">
-      <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb4">
-        <div class="f3 fw3 mv0 secondary o-50">{{ forloop.index | prepend: '0' }}</div>
-        <h2 class="f3 fw5 mv0 nowrap">{{ sector.title }}</h2>
-        <div class="dn db-l flex-auto bg-black-10 bar"></div>
-      </div>
-      <div class="fw3 secondary ml4 pl3 mw8 lh-copy list">
-          <p>{{ sector.description }}</p>
+        <div class="container pv5">
+            <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb4">
+                <div class="f3 fw3 mv0 secondary o-50">{{ forloop.index | prepend: '0' }}</div>
+                <h2 class="f3 fw5 mv0 nowrap-l">{{ sector.title }}</h2>
+                <div class="dn db-l flex-auto bg-black-10 bar"></div>
+            </div>
+            <div class="fw3 secondary ml4-l pl3-l lh-copy list ">
+                <p class="mb4 mw7">{{ sector.description }}</p>
+                <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb4">
+                    <img src="{{ sector.image-1 }}" alt="{{ sector.title }}" class="w-50-l w-100">
+                    <img src="{{ sector.image-2 }}" alt="{{ sector.title }}" class="w-50-l w-100 dn db-l">
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   {% endfor %}
 
