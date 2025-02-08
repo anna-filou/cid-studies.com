@@ -1,0 +1,26 @@
+---
+permalink: /404.html
+layout: default
+---
+
+<section class="container mt4">
+  <div class="pa4 ba bw1 b--accent">
+    <div class="flex flex-column flex-row-l">
+      <div class="w-50-ns">
+        <h1 class="flex flex-column flex-row-ns mt0 mb4">
+          <span class="accent mr3 mb2 mb-ns">404</span>
+          <span class="secondary">Page not found</span>
+        </h1>
+      </div>
+      <div class="w-50-ns items-center">
+        <h3 class="mono f5 fw4 ttu mt3">Υπηρεσίες</h3>
+        <div class="flex flex-column gap3">
+          {%for service in site.services%}
+          <a href="{{ service.url }}" class="link b--brand lh-title dim">
+            {{ service.title }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -4,6 +4,7 @@
 $brand: #1928aa;
 $text-primary: #152722;
 $text-secondary: #415651;
+$accent: #00a69d;
 $container: 1470px;
 $bg-secondary: #f5f8f5;
 
@@ -34,6 +35,10 @@ body {
 
 .brand {
   color: $brand;
+}
+
+.accent {
+  color: $accent;
 }
 
 .bg-brand {
@@ -155,6 +160,10 @@ footer h3 {
 
 .border-button-brand {
   border: 1.5px solid $brand;
+}
+
+.b--accent {
+  border-color: $accent;
 }
 
 .justify-center {
