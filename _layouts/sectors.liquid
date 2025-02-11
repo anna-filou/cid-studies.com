@@ -17,12 +17,12 @@ layout: default
   {% for sector in site.data.sectors.sectors %}
     <div class="{% assign is_even = forloop.index0 | modulo: 2 %}{% if is_even == 0 %}bg-secondary{% endif %}">
         <div class="container pv5">
-            <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb4">
+            <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb3">
                 <div class="f3 fw3 mv0 secondary o-50">{{ forloop.index | prepend: '0' }}</div>
                 <h2 class="f3 fw5 mv0 nowrap-l">{{ sector.title }}</h2>
                 <div class="dn db-l flex-auto bg-black-10 bar"></div>
             </div>
-            <div class="fw3 secondary ml4-l pl3-l lh-copy list ">
+            <div class="f4-ns fw4 secondary ml4-l pl3-l lh-copy list ">
                 <p class="mb4 mw7">{{ sector.description }}</p>
                 <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb4">
                     <img src="{{ sector.image-1 }}" alt="{{ sector.title }}" class="w-50-l w-100">

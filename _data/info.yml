@@ -1,0 +1,14 @@
+company-name: Chemical Infrastructure Development Studies
+company-address: Φανταστική Οδός 36, 155 60 Αθήνα
+email: info@cid-studies.com
+phone: 69 1234 5678
+country-code: '+30'
+footer-links:
+  - title: Επικοινωνία
+    url: /contact
+  - title: Σχετικά με εμάς
+    url: /about
+  - title: Πολιτική Ποιότητας
+    url: /quality-policy
+  - title: Νέα
+    url: /news

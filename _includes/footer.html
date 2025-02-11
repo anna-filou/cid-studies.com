@@ -9,12 +9,13 @@
       />
     </div>
 
+    {% assign data = site.data.info %}
     <div class="flex flex-column flex-row-l items-end fw3 w-50-l">
-      <a href="tel:+306912345678" class="f4 w-50-l mb3 mb0-l link dim">
-        <span class="o-60">+30</span> 69 1234 5678
+      <a href="tel:{{ data.country-code }}{{ data.phone | remove: ' ' }}" class="f4 w-50-l mb3 mb0-l link dim">
+        <span class="o-60">{{ data.country-code }}</span> {{ data.phone }}
       </a>
       <a href="mailto:info@cid-studies.com" class="f4 w-50-l link dim">
-        info@cid-studies.com
+        {{ data.email }}
       </a>
     </div>
   </div>
@@ -23,9 +24,9 @@
 
   <div class="flex flex-column flex-row-l items-end-l">
     <div class="w-50-l f4-ns fw5 mb3 mb0-l">
-      Chemical Infrastructure Development Studies
+      {{ data.company-name }}
     </div>
-    <div class="w-50-l f4-ns">Φανταστική Οδός 36, 155 60 Αθήνα</div>
+    <div class="w-50-l f4-ns">{{ data.company-address }}</div>
   </div>
 
   <hr />
@@ -34,39 +35,23 @@
     <div class="flex flex-column flex-row-ns w-100 w-50-l">
       <div class="flex flex-column w-50-ns mr3-ns">
         <h3>ΕΤΑΙΡΕΙΑ</h3>
-        <a href="#" class="mb3 no-underline brand underline-hover"
-          >Επικοινωνία</a
-        >
-        <a href="#" class="mb3 no-underline brand underline-hover"
-          >Σχετικά με εμάς</a
-        >
-        <a href="#" class="mb3 no-underline brand underline-hover"
-          >Πολιτική Ποιότητας</a
-        >
-        <a href="#" class="mb3 no-underline brand underline-hover">Νέα</a>
+        {% for link in data.footer-links %}
+        <a href="{{ link.url }}" class="mb3 no-underline brand underline-hover">{{ link.title }}</a>
+        {% endfor %}
       </div>
+
       <div class="flex flex-column w-50-ns mr3-l">
         <h3>ΥΠΗΡΕΣΙΕΣ</h3>
-        <a href="#" class="mb3 no-underline brand underline-hover"
-          >Ίδρυση & Αδειοδότηση</a
-        >
-        <a href="#" class="mb3 no-underline brand underline-hover"
-          >Μελέτες & υλοποίηση λύσεων</a
-        >
-        <a href="#" class="mb3 no-underline brand underline-hover"
-          >Περιβαλλοντικές Υπηρεσίες</a
-        >
+        {% for service in site.services %}
+          <a href="{{ service.url }}" class="mb3 no-underline brand underline-hover">{{ service.title }}</a>
+        {% endfor %}
       </div>
     </div>
     <div class="flex flex-column w-100 w-50-l">
       <h3>ΤΟΜΕΙΣ</h3>
-      <div class="mb3">
-        Εγκαταστάσεις Επεξεργασίας Λυμάτων (Βιολογικοί Καθαρισμοί)
-      </div>
-      <div class="mb3">
-        Αντλιοστάσια και εγκαταστάσεις αποχετευτικών δικτύων
-      </div>
-      <div class="mb3">Εγκαταστάσεις επεξεργασίας βιομηχανικών αποβλήτων</div>
+      {% for sector in site.data.sectors.sectors %}
+      <div class="mb3">{{ sector.title }}</div>
+      {% endfor %}
     </div>
   </div>
 
