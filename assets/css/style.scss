@@ -5,6 +5,8 @@ $brand: #1928aa;
 $text-primary: #152722;
 $text-secondary: #415651;
 $accent: #00a69d;
+$stat-color: #a9c866;
+$stat-highlight: #7dd2f0;
 $container: 1470px;
 $bg-secondary: #f5f8f5;
 
@@ -39,6 +41,14 @@ body {
 
 .accent {
   color: $accent;
+}
+
+.bg-stat {
+  background-color: $stat-color;
+}
+
+.bg-highlight {
+  background-color: $stat-highlight;
 }
 
 .bg-brand {
@@ -132,6 +142,18 @@ footer h3 {
 
 .colored-divider {
   height: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0fr;
+  grid-template-rows: auto auto auto;
+  gap: 2em 2em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
 }
 
 // utility classes
