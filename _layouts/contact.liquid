@@ -3,66 +3,99 @@ layout: default
 ---
 
 <section class="container pv5 flex flex-column flex-row-ns bg-secondary">
-    <div class="flex flex-column w-third-l">
+    <div class="flex flex-column w-third-l mr3">
         <div>
-            <p class="lh-copy f3 fw7 mono">Chemical Infrastructure Development Studies</p>
+            <p class="lh-copy f4 fw7 mono ma0 pb4">Chemical Infrastructure Development Studies</p>
         </div>
         <div>
-            <p class="lh-copy secondary ttu ma0 pv4">Επικοινωνια</p>
+            <p class="lh-copy secondary ttu ma0 pb2">Επικοινωνια</p>
+        </div>
         <div class="flex flex-row items-center pb2">
             <div class="bg-accent h1 w1 mr3"></div>
-            <a class="link dim" href="tel:+30 69 1234 5678">+30 69 1234 5678</a>
+            <a class="link dim fw7" href="tel:+30 69 1234 5678">+30 69 1234 5678</a>
         </div>
         <div class="flex flex-row items-center pb4">
             <div class="bg-accent h1 w1 mr3"></div>
-            <a class="link dim" href="mailto:info@cid-studies.com">info@cid-studies.com</a>
+            <a class="link dim fw7" href="mailto:info@cid-studies.com">info@cid-studies.com</a>
         </div>
 
         <div class="ma0 pb4">
             <p class="lh-copy secondary ttu ma0">ωραριο</p>
-            <p class="lh-copy">Δευτέρα–Παρασκευή / 10:00–18:00</p>
+            <p class="lh-copy ma0">Δευτέρα–Παρασκευή / 10:00–18:00</p>
 
         </div>
 
         <div>
             <p class="lh-copy secondary ttu ma0">διευθυνση</p>
-            <p class="lh-copy">Φανταστική Οδός 36, 155 60 Αθήνα</p>
+            <p class="lh-copy ma0 pb4">Φανταστική Οδός 36, 155 60 Αθήνα</p>
         </div>
     </div>
-    </div>
+
     <div class="flex flex-column w-two-thirds-l">
         <div>
-            <h1>Επικοινωνία</h1>
-            <p>
+            <h1 class="brand ma0">Επικοινωνία</h1>
+            <p class="ma0 pv4-l pv3 lh-copy">
                 Η Chemical Infrastructure Development Studies ιδρύθηκε το 2019, έχοντας ως όραμα την παροχή ολοκληρωμένων συμβουλευτικών υπηρεσιών στις επιχειρήσεις, με στόχο τη διαρκή εκπλήρωση των αναγκών τους και την ενίσχυση της βιώσιμης ανάπτυξής τους.
             </p>
         </div>
         <form class="flex flex-column">
             <div class="mb3">
-                <label for="name" class="db fw6 lh-copy">Όνομα *</label>
-                <input type="text" id="name" name="name" class="input-reset ba b--black-20 pa2 mb2 db w-100" required>
+                <div class="flex flex-row items-center">
+                    <label for="name" class="db fw6 lh-copy brand mr2 mb2">Όνομα *</label>
+                    <div class="flex-auto bg-accent bar o-30" style="height: 1px;"></div>
+                </div>
+                <input type="text" id="name" name="name" class="input-reset ba b--accent pa2 mb2 db w-100" required>
+            </div>
+
+            <div class="flex flex-column flex-row-ns gap3">
+                <div class="mb3 w-50-ns">
+                    <div class="flex flex-row items-center">
+                        <label for="_1" class="db fw6 lh-copy brand mr2 mb2">Εταιρεία *</label>
+                        <div class="flex-auto bg-accent bar o-30" style="height: 1px;"></div>
+                    </div>
+                    <input type="text" id="_1" name="_1" class="input-reset ba b--accent pa2 mb2 db w-100" required>
+                </div>
+                <div class="mb3 w-50-ns">
+                    <div class="flex flex-row items-center">
+                        <label for="_2" class="db fw6 lh-copy brand mr2 mb2 nowrap">Θέση στην εταιρεία *</label>
+                        <div class="flex-auto bg-accent bar o-30" style="height: 1px;"></div>
+                    </div>
+                    <select id="_2" name="_2" class="input-reset ba b--accent pa2 mb2 db w-100 bg-white" required>
+                        <option value="" disabled selected>Επιλέξτε θέση</option>
+                        <option value="manager">Διευθυντής</option>
+                        <option value="developer">Προγραμματιστής</option>
+                        <option value="designer">Σχεδιαστής</option>
+                        <option value="analyst">Αναλυτής</option>
+                        <option value="other">Άλλο</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="flex flex-column flex-row-ns gap3">
+            <div class="mb3 w-50-ns">
+                <div class="flex flex-row items-center">
+                    <label for="_3" class="db fw6 lh-copy brand mr2 mb2">Τηλέφωνο</label>
+                    <div class="flex-auto bg-accent bar o-30" style="height: 1px;"></div>
+                </div>
+                <input type="tel" id="_3" name="_3" class="input-reset ba b--accent pa2 mb2 db w-100" required>
+            </div>
+            <div class="mb3 w-50-ns">
+                <div class="flex flex-row items-center">
+                    <label for="email" class="db fw6 lh-copy brand mr2 mb2">Email *</label>
+                    <div class="flex-auto bg-accent bar o-30" style="height: 1px;"></div>
+                </div>
+                <input type="email" id="email" name="email" class="input-reset ba b--accent pa2 mb2 db w-100" required>
+            </div>
+
             </div>
             <div class="mb3">
-                <label for="_1" class="db fw6 lh-copy">Εταιρεία *</label>
-                <input type="text" id="_1" name="_1" class="input-reset ba b--black-20 pa2 mb2 db w-100" required>
+                <div class="flex flex-row items-center">
+                    <label for="_4" class="db fw6 lh-copy brand mr2 mb2">Μήνυμα *</label>
+                    <div class="flex-auto bg-accent bar o-30" style="height: 1px;"></div>
+                </div>
+                <textarea id="_4" name="_4" class="input-reset ba b--accent pa2 mb2 db w-100" required></textarea>
             </div>
-            <div class="mb3">
-                <label for="_2" class="db fw6 lh-copy">Θέση στην εταιρεία *</label>
-                <input type="text" id="_2" name="_2" class="input-reset ba b--black-20 pa2 mb2 db w-100" required>
-            </div>
-            <div class="mb3">
-                <label for="_3" class="db fw6 lh-copy">Τηλέφωνο</label>
-                <input type="tel" id="_3" name="_3" class="input-reset ba b--black-20 pa2 mb2 db w-100" required>
-            </div>
-            <div class="mb3">
-                <label for="email" class="db fw6 lh-copy">Email *</label>
-                <input type="email" id="email" name="email" class="input-reset ba b--black-20 pa2 mb2 db w-100" required>
-            </div>
-            <div class="mb3">
-                <label for="_4" class="db fw6 lh-copy">Μήνυμα *</label>
-                <textarea id="_4" name="_4" class="input-reset ba b--black-20 pa2 mb2 db w-100" required></textarea>
-            </div>
-            <button type="submit" class="f6 link dim br3 ba ph3 pv2 mb2 dib white bg-accent">ΑΠΟΣΤΟΛΗ</button>
+            <button type="submit" class="f6 link dim br4 ba ph3 pv3 mb2 dib white bg-accent">ΑΠΟΣΤΟΛΗ</button>
         </form>
     </div>
 </section>

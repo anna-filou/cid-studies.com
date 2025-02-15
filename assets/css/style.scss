@@ -130,6 +130,11 @@ footer h3 {
   text-transform: uppercase;
 }
 
+input,
+select {
+  height: 2.5rem;
+}
+
 /* TACHYONS -NS */
 @media (max-width: 50em) {
   .container {
