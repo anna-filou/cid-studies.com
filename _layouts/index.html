@@ -2,84 +2,91 @@
 layout: default
 ---
 
-<section class="container-ns flex flex-column flex-row-l">
+<section class="container-width flex flex-column flex-row-l">
   <!-- Left Content -->
-  <div class="w-100 w-50-l pa3 pb4 pr5-l pv5-l flex flex-column justify-center">
+  <div class="w-100 w-50-l pa3 pa4-ns flex flex-column justify-center">
     <h1 class="f3 f2-ns brand fw5 mt0-l mb4 lh-title">
-      {{ site.data.hero.title }}
+      {{ site.data.index.title }}
     </h1>
 
-    <p class="lh-copy mv0 secondary">{{ site.data.hero.description }}</p>
+    <p class="lh-copy mv0 secondary">{{ site.data.index.description }}</p>
 
     <div class="flex items-center flex-wrap mv4">
       <a
-        href="{{ site.data.hero.cta_url }}"
+        href="{{ site.data.index.cta_url }}"
         class="ttu border-button-brand ph3 pv2 mono b nowrap mr4 link dim"
-        >{{ site.data.hero.cta_text }}</a
+        >{{ site.data.index.cta_text }}</a
       >
       <a
-        href="{{ site.data.hero.company_url }}"
+        href="{{ site.data.index.company_url }}"
         class="ttu border-bottom-brand dim mono b nowrap-ns link"
-        >{{ site.data.hero.company_text }}</a
+        >{{ site.data.index.company_text }}</a
       >
     </div>
   </div>
 
   <div class="w-100 w-50-l">
     <div
-      class="vh-50 vh-75-l cover bg-center"
+      class="h6 cover bg-center"
       style="background-image: url('/assets/images/hero-image.png')"
     ></div>
   </div>
 </section>
 
-<div class="container bg-yellow">
+{% comment %} <div class="container bg-yellow">
   <div class="pa2 dn-ns">Mobile Default</div>
   <div class="pa2 dn db-ns dn-l">Medium -NS</div>
   <div class="pa2 dn db-l">Desktop -L</div>
-</div>
+</div> {% endcomment %}
 
-{% include services.html %} {% include cta.html %} {% include sectors.html %}
+{% include services.html %} 
 
-<section class="container-ns flex flex-column flex-row-l bt-l b--brand">
-  <div class="w-50-l pv5 pr4">
-    <h2 class="mv5 pb4 mt0-l">Φερνουμε αποτελέσματα</h2>
-    <div class="grid">this will be the grid icons part</div>
-  </div>
-  <div class="w-50-l bl-l b--brand">
-    <div>
-      <img class="w-100" src="/assets/images/plant.png" />
+{% include sectors.html %}
+
+<section class="container-width flex flex-column flex-row-l bt-l b--brand">
+  <div class="w-50-l pb5 pa3 pa4-ns pr5-l">
+    <h2 class="f2 fw5 mt0 mb5 mb7-l">Φέρνουμε αποτελέσματα</h2>
+    <div class="grid">
+      {% assign case_study = site.pages | where: "name", "case-study.md" | first %}
+      {% for stat in case_study.stats %}
+        <div class="flex flex-column bt bw2 b--green">
+          <div class="secondary fw5 mt3 mb2">{{ stat.title }}</div>
+          <div class="fw5 f1">{{ stat.stat }}</div>
+        </div>
+      {% endfor %}
     </div>
-    <div class="pa4 pb5">
-      <p class="lh-copy pt3 secondary fw5">
+  </div>
+  <div class="w-50-l bl-l b--brand flex flex-column pa3 pa0-l">
+    <div class="w-100 vh-50 h-100-l cover bg-center" style="background-image: url('/assets/images/plant.png');">
+    </div>
+    <div class="mv4 mv0-l pa4-l">
+      <p class="lh-copy secondary fw5 mt0">
         Μειώσεις στις μετρούμενες παραμέτρους που παρατηρήθηκαν—από το
         πιστοποιημένο (ISO17025) χημείο της εγκατάστασης—μετά από πιλοτική
         εφαρμογή 30 ημερών στην μονάδα κατεργασίας υγρών αποβλήτων στο
         διυλιστήριο των Ελληνικών Πετρελαίων στα Διαβατά Θεσσαλονίκης.
       </p>
-      <a href="" class="mono b nowrap mr4 mt4 link dim bb bw2 b--brand f5 fw7"
+      <a href="" class="b nowrap mr4 mt4 link dim bb bw2 b--brand f5 fw7"
         >Διαβάστε το case study →</a
       >
     </div>
   </div>
 </section>
 
-<section class="container-ns flex flex-column flex-row-l bt-l bb-l b--brand">
+<section class="container-width flex flex-column flex-row-l bt-l bb-l b--brand">
   <div class="w-50-l flex items-center bg-secondary">
     <img class="w-100" src="/assets/images/graphic.svg" />
   </div>
-  <div
-    class="w-50-l ph3 ph0-ns pa4-l flex flex-column justify-between h-auto bt bt-0-l bl-l b--brand"
-  >
-    <h2 class="mv5 mt0-l">Η Eταιρεία</h2>
+  <div class="w-50-l ph3 ph0-ns pa4-l flex flex-column justify-between h-auto bt bt-0-l bl-l b--brand">
+    <h2 class="f2 fw5 mv5 mt0-l">Η Eταιρεία</h2>
     <div>
       <div class="pb3 pb4-l">
         <a
           href="/about"
-          class="mono b nowrap mr4 link dim bb bw2 b--brand f4 fw7"
+          class="b nowrap mr4 link dim bb bw2 b--brand f4 fw7"
           >Σχετικά με εμάς →</a
         >
-        <p class="lh-copy pt3 secondary fw5">
+        <p class="lh-copy secondary fw5">
           Σας βοηθάμε να βελτιστοποιήσετε τις διαδικασίες επεξεργασίας νερού και
           να διαχειριστείτε τη μονάδα σας με πιο αποτελεσματικό και βιώσιμο
           τρόπο ενόψει των ολοένα και πιο αυστηρών κανονισμών και των
@@ -89,10 +96,10 @@ layout: default
       <div>
         <a
           href="/quality-policy"
-          class="mono b nowrap mr4 link dim bb bw2 b--brand f4 fw7"
+          class="b nowrap mr4 link dim bb bw2 b--brand f4 fw7"
           >Πολιτική Ποιότητας →</a
         >
-        <p class="lh-copy pt3 secondary fw5">
+        <p class="lh-copy secondary fw5">
           Η λειτουργία της επιχείρησης Chemical infrastructure Development
           Studies διέπεται από τις αρχές του Συστήματος Διαχείρισης Ποιότητας
           που συντάχθηκε βάσει του προτύπου ISO 9001:2015.
@@ -101,5 +108,7 @@ layout: default
     </div>
   </div>
 </section>
+
+{% include cta.html %} 
 
 {% include news.html %}

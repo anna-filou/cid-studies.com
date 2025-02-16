@@ -3,12 +3,10 @@ title: Privacy Policy
 layout: article
 lang: en
 ref: privacy-policy
-
 stats:
-
-- title: Μείωση COD έως και
-  stat: 50%
-  bar-color: bg-stat
+  - title: Μείωση COD έως και
+    stat: 50%
+    bar-color: bg-stat
   - title: Μείωση TTS έως και
     stat: 50%
     bar-color: bg-stat
@@ -23,6 +21,5 @@ stats:
     bar-color: bg-stat
   - title: Το pH διατηρήθηκε σε σταθερά επίπεδα
     stat: 7,9–8,2
-    bar-color: bg-stat-highlight
-
+    bar-color: bg-highlight
 ---

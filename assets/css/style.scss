@@ -26,6 +26,13 @@ body {
 .b--brand {
   border-color: $brand;
 }
+
+.container-width {
+  max-width: $container;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .container,
 .container-ns {
   max-width: $container;
@@ -135,6 +142,15 @@ select {
   height: 2.5rem;
 }
 
+textarea {
+  min-height: 150px;
+}
+
+button {
+  background: #00867F;
+  border: none;
+}
+
 /* TACHYONS -NS */
 @media (max-width: 50em) {
   .container {
@@ -155,14 +171,12 @@ select {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 0fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto; 
   gap: 2em 2em;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
+  // grid-auto-flow: row;
+  // grid-template-areas:
+  //   ". .";
 }
 
 // utility classes
@@ -227,9 +241,6 @@ article {
   top: 0;
 }
 
-.bar {
-  height: 1px;
-}
 
 // CUSTOM BREAKPOINTS
 @media screen and (max-width: 1010px) {
