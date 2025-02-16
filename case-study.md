@@ -1,8 +1,8 @@
 ---
-title: Privacy Policy
+title: Case Study
 layout: article
 lang: en
-ref: privacy-policy
+ref: case-study
 stats:
   - title: Μείωση COD έως και
     stat: 50%

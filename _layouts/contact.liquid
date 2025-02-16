@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% assign data = site.data.info %}
+
 <section class="container pv5 flex flex-column flex-row-ns bg-secondary">
     <div class="flex flex-column w-third-ns mr3">
         <div>
@@ -12,22 +14,22 @@ layout: default
         </div>
         <div class="flex flex-row items-center pb2">
             <div class="bg-accent h1 w1 mr3"></div>
-            <a class="link dim fw7" href="tel:+30 69 1234 5678">+30 69 1234 5678</a>
+            <a class="link dim fw7" href="tel:{{ data.country-code }}{{ data.phone | remove: ' ' }}"><span class="o-60">{{ data.country-code }}</span> {{ data.phone }}</a>
         </div>
         <div class="flex flex-row items-center pb4">
             <div class="bg-accent h1 w1 mr3"></div>
-            <a class="link dim fw7" href="mailto:info@cid-studies.com">info@cid-studies.com</a>
+            <a class="link dim fw7" href="mailto:{{ data.email }}">{{ data.email }}</a>
         </div>
 
         <div class="ma0 pb4">
             <p class="lh-copy secondary ttu ma0">ωραριο</p>
-            <p class="lh-copy ma0">Δευτέρα–Παρασκευή / 10:00–18:00</p>
+            <p class="lh-copy ma0">{{ data.hours }}</p>
 
         </div>
 
         <div>
             <p class="lh-copy secondary ttu ma0">διευθυνση</p>
-            <p class="lh-copy ma0 pb4">Φανταστική Οδός 36, 155 60 Αθήνα</p>
+            <p class="lh-copy ma0 pb4">{{ data.company-address }}</p>
         </div>
     </div>
 

@@ -14,7 +14,7 @@
       <a href="tel:{{ data.country-code }}{{ data.phone | remove: ' ' }}" class="f4 w-50-l mb3 mb0-l link dim">
         <span class="o-60">{{ data.country-code }}</span> {{ data.phone }}
       </a>
-      <a href="mailto:info@cid-studies.com" class="f4 w-50-l link dim">
+      <a href="mailto:{{ data.email }}" class="f4 w-50-l link dim">
         {{ data.email }}
       </a>
     </div>
@@ -26,6 +26,7 @@
     <div class="w-50-l f4-ns fw5 mb3 mb0-l">
       {{ data.company-name }}
     </div>
+    
     <div class="w-50-l f4-ns">{{ data.company-address }}</div>
   </div>
 
