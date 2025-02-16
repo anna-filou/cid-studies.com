@@ -26,7 +26,7 @@ layout: default
       {% for section in site.data.downloads %}
       {% assign anchor = section.title | strip | downcase | replace: ' ', '-' %}
       <section id="{{ anchor }}" class="mb5">
-        <h2 class="f3 fw4 brand mv0">{{ section.title }}</h2>
+        <a href="{{ section.url }}"><h2 class="f3 fw4 brand mv0">{{ section.title }}</h2></a>
         <div class="mt2 mb3 lh-copy">{{ section.description }}</div>
 
         <div class="flex flex-column gap3">

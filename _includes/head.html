@@ -15,17 +15,17 @@
 <meta content="{{ site.title }} | {{ page.title }}" property="twitter:title" />
 <meta
   content="{% if page.description %}{{page.description}}{%else%}{{site.description}}{% endif %}"
-  property="twitter:description"
+  property="twitter:description" 
 />
 <meta property="og:type" content="website" />
 <meta
   property="og:image"
-  content="{% if page.banner %}{{site.url}}{{page.banner}}{%else%}{{site.url}}/assets/meta/an-og.jpg?v=2{% endif %}"
+  content="{% if page.banner %}{{site.url}}{{page.banner}}{%else%}{{site.url}}/og.png{% endif %}"
 />
 <meta content="summary_large_image" name="twitter:card" />
 <meta
   property="twitter:image"
-  content="{% if page.banner %}{{site.url}}{{page.banner}}{%else%}{{site.url}}/assets/meta/an-og.jpg?v=2{% endif %}"
+  content="{% if page.banner %}{{site.url}}{{page.banner}}{%else%}{{site.url}}/og.png{% endif %}"
 />
 
 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
