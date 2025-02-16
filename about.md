@@ -1,5 +1,5 @@
 ---
-title: Chemical Infrastructure Development
+title: Η Εταιρεία
 layout: about
 lang: en
 ref: about

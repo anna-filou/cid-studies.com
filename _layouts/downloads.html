@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="container pv5 bb b--brand">
+    <h2 class="brand f2 ma0 fw5 tc">{{page.title}}</h2>
+</div>
+
+<div class="container bg-secondary pv5 flex flex-column flex-row-ns">
+
+    <div class="w-30-ns min-h-100 b--brand relative">
+        <div class="sticky mono brand">
+          {% for section in site.data.downloads %}
+            {% assign anchor = section.title | strip | downcase | replace: ' ', '-' %}
+            <div class="pa3 bl bw2 b--light-gray" data-nav-section="#{{ anchor }}">
+              <a href="#{{ anchor }}" class="link brand">{{ section.title }}</a>
+            </div>
+          {% endfor %}
+        </div>
+    </div>
+  
+    <div class="lh-copy mw8 w-70-ns pl5-ns mt5 mt0-ns">
+      {% for section in site.data.downloads %}
+      {% assign anchor = section.title | strip | downcase | replace: ' ', '-' %}
+      <section id="{{ anchor }}" class="mb5">
+        <h2 class="f3 fw4 brand mv0">{{ section.title }}</h2>
+        <div class="mt2 mb3 lh-copy">{{ section.description }}</div>
+
+        <div class="flex flex-column gap3">
+          {% for file in section.files %}
+           <a href="{{ file.url }}" class="flex bg-white no-underline primary grow">
+            <!-- icon container -->
+             <div class="bg-{{section.color}} flex items-center justify-center flex-shrink-0 ph3">
+                <svg class="mh0 mh2-ns" width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.5996 16H21.3996L14.9996 22.4L8.59961 16H13.3996V9.6H16.5996V16ZM19.7996 3.2H3.79961V28.8H26.1996V9.6H19.7996V3.2ZM0.599609 1.58688C0.599609 0.71048 1.31559 0 2.19721 0H21.3996L29.3991 8L29.3996 30.388C29.3996 31.2782 28.6878 32 27.8102 32H2.18905C1.31123 32 0.599609 31.2715 0.599609 30.4131V1.58688Z" fill="white"/>
+                </svg>
+             </div>
+             <!-- text container -->
+             <div class="pa3">
+                <h3 class="f5 mv0">{{ file.title }}</h3>
+                <div>{{ file.description }}</div>
+             </div>
+            </a>
+          {% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+    
+</div>
+
+<script src="/assets/js/toc.js" defer></script>
