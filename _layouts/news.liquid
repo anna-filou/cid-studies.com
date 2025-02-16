@@ -4,27 +4,29 @@ layout: default
 
 <section class="container pv5 flex flex-column flex-row-l gap5">
     <div class="items-start w-50-l w-100">
-        <h2 class="f1 fw4 ma0 brand">{{site.data.news.title}}</h2>
+        <h2 class="f1 fw4 ma0 brand mb3">{{site.data.news.title}}</h2>
     </div>
     <div class="w-50-l w-100">
-        <p class="lh-copy pt3 pb3">{{site.data.news.description}}</p>
+        <p class="lh-copy mt2 mb4">{{site.data.news.description}}</p>
         <a class="b-brand bb bw2 pb2 dim link nowrap mono b" href="/contact">ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ →</a>
     </div>
 </section>
 
 <section class="container-ns pv5">
     {% for post in site.data.news.posts %}
-    <div class="mb4 mb5-ns bg-secondary pa4 pa4-ns">
-        <div class="flex flex-column flex-row-l items-start items-center-l gap3">
-            <div class="f4-ns fw4 secondary o-80 w4">{{post.date}}</div>
+    <div class="mb4 bg-secondary pa4 pa4-ns">
+        <div class="flex flex-column flex-row-l items-start items-start-l gap3">
+            <div class="f4-ns fw4 secondary o-80 w4 flex-shrink-0 mt1">{{post.date}}</div>
             <h2 class="f4 f3-ns fw5 ma0 lh-title">{{post.title}}</h2>
             <div class="dn db-l flex-auto bg-black-10 bar"></div>
             <a class="b-brand bb bw2 pb2 link b dim nowrap" href="{{post.link}}">{{post.link_text}}</a>
         </div>
-        <div class="fw5 secondary lh-copy list flex flex-column flex-row-l items-start items-center-l gap3">
-            <div class="w4 flex-shrink-0"></div>
-            <p>{{post.description}}</p>
-        </div>
+        {% if post.description %}
+            <div class="fw5 secondary lh-copy list flex flex-column flex-row-l items-start items-center-l gap3">
+                <div class="w4 flex-shrink-0"></div>
+                <p>{{post.description}}</p>
+            </div>
+        {% endif %}
     </div>
     {% endfor %}
 </section>
