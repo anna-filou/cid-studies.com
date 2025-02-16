@@ -10,6 +10,11 @@ $stat-highlight: #7dd2f0;
 $container: 1470px;
 $bg-secondary: #f5f8f5;
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   font-family: Manrope, sans-serif;
   color: $text-primary;
@@ -217,6 +222,10 @@ button {
 
 .img-cover {
   object-fit: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 40px;
 }
 
 article {

@@ -20,13 +20,12 @@ layout: default
       {% assign headings = page.content | split: '
 #' %}
       {% for heading in headings %}
-
           {% assign title = heading | split: '
 ' | first | strip | remove: '#' %}
-          <div class="pa3 bl bw2 b--light-gray">
-            {{ title }}
+          {% assign anchor = title | strip | downcase | replace: ' ', '-' %}
+          <div class="pa3 bl bw2 b--light-gray" data-nav-section="#{{ anchor }}">
+            <a href="#{{ anchor }}" class="link brand">{{ title }}</a>
           </div>
-
       {% endfor %}
     </div>
   </div>
@@ -36,3 +35,5 @@ layout: default
   </article>
   
 </section>
+
+<script src="/assets/js/toc.js" defer></script>
