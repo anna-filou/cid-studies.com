@@ -3,6 +3,6 @@ content: Η εμπειρία μας και η άρτια τεχνική μας �
 link1:
   title: επικοινωνηστε μαζι μας →
   url: /contact
-link2:
-  title: δειτε τα ενημερωτικα μας φυλλαδια
-  url: /downloads
+# link2:
+#   title: δειτε τα ενημερωτικα μας φυλλαδια
+#   url: /downloads
