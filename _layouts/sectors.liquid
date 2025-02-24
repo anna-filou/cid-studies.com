@@ -22,11 +22,15 @@ layout: default
                 <h2 class="f3 fw5 mv0 nowrap-l">{{ sector.title }}</h2>
                 <div class="dn db-l flex-auto bg-black-10 bar"></div>
             </div>
-            <div class="f4-ns fw4 secondary ml4-l pl3-l lh-copy list ">
+            <div class="fw4 secondary ml4-l pl3-l lh-copy list ">
                 <p class="mb4 mw7">{{ sector.description }}</p>
                 <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb4">
-                    <img src="{{ sector.image-1 }}" alt="{{ sector.title }}" class="w-50-l w-100">
-                    <img src="{{ sector.image-2 }}" alt="{{ sector.title }}" class="w-50-l w-100 dn db-l">
+                    <div class="w-100 w-50-l">
+                        <div class="aspect-ratio aspect-ratio--8x5" style="background-image: url('{{ sector.image-1 }}'); background-size: cover; background-position: center;"></div>
+                    </div>
+                    <div class="w-100 w-50-l">
+                        <div class="aspect-ratio aspect-ratio--8x5 dn db-l" style="background-image: url('{{ sector.image-2 }}'); background-size: cover; background-position: center;"></div>
+                    </div>
                 </div>
             </div>
         </div>
