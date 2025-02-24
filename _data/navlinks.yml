@@ -6,8 +6,8 @@
   url: /services
 - title: νεα
   url: /news
-- title: ληψεις
-  url: /downloads
+# - title: ληψεις
+#   url: /downloads
 - title: επικοινωνια
   url: /contact
   class: pa2-5 bg-brand

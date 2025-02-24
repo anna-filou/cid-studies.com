@@ -21,11 +21,13 @@ layout: default
             <a class="link dim fw7" href="mailto:{{ data.email }}">{{ data.email }}</a>
         </div>
 
-        <div class="ma0 pb4">
-            <p class="lh-copy secondary ttu ma0">ωραριο</p>
-            <p class="lh-copy ma0">{{ data.hours }}</p>
-
-        </div>
+        {% if data.hours %}
+            <div class="ma0 pb4">
+                <p class="lh-copy secondary ttu ma0">ωραριο</p>
+                <p class="lh-copy ma0">{{ data.hours }}</p>
+            </div>
+        {% endif %}
+        
 
         <div>
             <p class="lh-copy secondary ttu ma0">διευθυνση</p>
