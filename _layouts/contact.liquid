@@ -7,18 +7,18 @@ layout: default
 <section class="container pv5 flex flex-column flex-row-ns bg-secondary">
     <div class="flex flex-column w-third-ns mr3">
         <div>
-            <p class="lh-copy f4 fw7 mono ma0 pb4">Chemical Infrastructure Development&nbsp;Studies</p>
+            <p class="lh-copy f4 fw7 mono ma0 pb4">{{ data.company.name }}</p>
         </div>
         <div>
-            <p class="lh-copy secondary ttu ma0 pb2">Επικοινωνια</p>
+            <p class="lh-copy secondary ttu ma0 pb2">{{data.contact}}</p>
         </div>
         <div class="flex flex-row items-center pb2">
             <div class="bg-accent h1 w1 mr3"></div>
-            <a class="link dim fw7" href="tel:{{ data.country-code }}{{ data.phone | remove: ' ' }}"><span class="o-60">{{ data.country-code }}</span> {{ data.phone }}</a>
+            <a class="link dim fw7" href="tel:{{ data.company.country-code }}{{ data.company.phone | remove: ' ' }}"><span class="o-60">{{ data.company.country-code }}</span> {{ data.company.phone }}</a>
         </div>
         <div class="flex flex-row items-center pb4">
             <div class="bg-accent h1 w1 mr3"></div>
-            <a class="link dim fw7" href="mailto:{{ data.email }}">{{ data.email }}</a>
+            <a class="link dim fw7" href="mailto:{{ data.company.email }}">{{ data.company.email }}</a>
         </div>
 
         {% if data.hours %}
@@ -30,76 +30,55 @@ layout: default
         
 
         <div>
-            <p class="lh-copy secondary ttu ma0">διευθυνση</p>
-            <p class="lh-copy ma0 pb4">{{ data.company-address }}</p>
+            <p class="lh-copy secondary ttu ma0">{{data.address}}</p>
+            <p class="lh-copy ma0 pb4">{{ data.company.address }}</p>
         </div>
     </div>
 
     <div class="flex flex-column w-two-thirds-ns">
         <div>
-            <h1 class="brand ma0">Επικοινωνία</h1>
+            <h1 class="brand ma0">{{site.data.contact-form.title}}</h1>
             <p class="ma0 pv4-l pv3 lh-copy">
-                Η Chemical Infrastructure Development Studies ιδρύθηκε το 2019, έχοντας ως όραμα την παροχή ολοκληρωμένων συμβουλευτικών υπηρεσιών στις επιχειρήσεις, με στόχο τη διαρκή εκπλήρωση των αναγκών τους και την ενίσχυση της βιώσιμης ανάπτυξής τους.
+                {{site.data.contact-form.description}}
             </p>
         </div>
         <form class="flex flex-column">
-            <div class="mb3">
-                <div class="flex flex-row items-center mr2 mb2">
-                    <label for="name" class="db fw6 brand mr2">Όνομα *</label>
-                    <div class="flex-auto bg-accent bar o-30"></div>
-                </div>
-                <input type="text" id="name" name="name" class="input-reset ba b--accent pa2 mb2 db w-100" required>
-            </div>
+            {% assign fields = site.data.contact-form.fields %}
+            {% assign current_group = "" %}
 
-            <div class="flex flex-column flex-row-ns gap3">
-                <div class="mb3 w-50-ns">
+            {% for field in fields %}
+                {% if field.group != current_group %}
+                    {% if current_group != "" %}
+                        </div> <!-- Close previous group -->
+                    {% endif %}
+                    <div class="flex flex-column flex-row-ns gap3"> <!-- Start new group -->
+                    {% assign current_group = field.group %}
+                {% endif %}
+
+                <div class="mb3 w-100">
                     <div class="flex flex-row items-center mr2 mb2">
-                        <label for="_1" class="db fw6 brand mr2">Εταιρεία *</label>
+                        <label for="{{ field.name }}" class="db fw6 brand mr2">{{ field.label }}</label>
                         <div class="flex-auto bg-accent bar o-30"></div>
                     </div>
-                    <input type="text" id="_1" name="_1" class="input-reset ba b--accent pa2 mb2 db w-100" required>
+                    {% if field.type == "text" or field.type == "tel" or field.type == "email" %}
+                        <input type="{{ field.type }}" id="{{ field.name }}" name="{{ field.name }}" class="input-reset ba b--accent pa2 mb2 db w-100" {% if field.required %}required{% endif %}>
+                    {% elsif field.type == "select" %}
+                        <select id="{{ field.name }}" name="{{ field.name }}" class="input-reset ba b--accent pa2 mb2 db w-100 bg-white" {% if field.required %}required{% endif %}>
+                            {% for option in field.options %}
+                                <option value="{{ option.value }}" {% if option.value == "" %}disabled selected{% endif %}>{{ option.text }}</option>
+                            {% endfor %}
+                        </select>
+                    {% elsif field.type == "textarea" %}
+                        <textarea id="{{ field.name }}" name="{{ field.name }}" class="input-reset ba b--accent pa2 mb2 db w-100" {% if field.required %}required{% endif %}></textarea>
+                    {% endif %}
                 </div>
-                <div class="mb3 w-50-ns">
-                    <div class="flex flex-row items-center mr2 mb2">
-                        <label for="_2" class="db fw6 brand mr2 nowrap">Θέση στην εταιρεία *</label>
-                        <div class="flex-auto bg-accent bar o-30"></div>
-                    </div>
-                    <select id="_2" name="_2" class="input-reset ba b--accent pa2 mb2 db w-100 bg-white" required>
-                        <option value="" disabled selected>Επιλέξτε θέση</option>
-                        <option value="mechanic">Μελετητής/Μηχανικός</option>
-                        <option value="supervisor">Τεχνικός Υπεύθυνος</option>
-                        <option value="executive">Διοίκηση</option>
-                        <option value="sales">Πωλήσεις</option>
-                        <option value="other">Άλλη</option>
-                    </select>
-                </div>
-            </div>
+            {% endfor %}
+            
+            {% if current_group != "" %}
+                </div> <!-- Close last group -->
+            {% endif %}
 
-            <div class="flex flex-column flex-row-ns gap3">
-            <div class="mb3 w-50-ns">
-                <div class="flex flex-row items-center mr2 mb2">
-                    <label for="_3" class="db fw6 brand mr2">Τηλέφωνο</label>
-                    <div class="flex-auto bg-accent bar o-30"></div>
-                </div>
-                <input type="tel" id="_3" name="_3" class="input-reset ba b--accent pa2 mb2 db w-100" required>
-            </div>
-            <div class="mb3 w-50-ns">
-                <div class="flex flex-row items-center mr2 mb2">
-                    <label for="email" class="db fw6 brand mr2">Email *</label>
-                    <div class="flex-auto bg-accent bar o-30"></div>
-                </div>
-                <input type="email" id="email" name="email" class="input-reset ba b--accent pa2 mb2 db w-100" required>
-            </div>
-
-            </div>
-            <div class="mb3">
-                <div class="flex flex-row items-center mr2 mb2">
-                    <label for="message" class="db fw6 brand mr2">Μήνυμα *</label>
-                    <div class="flex-auto bg-accent bar o-30"></div>
-                </div>
-                <textarea id="message" name="message" class="input-reset ba b--accent pa2 mb2 db w-100" required></textarea>
-            </div>
-            <button type="submit" class="mono br-pill bw0 pa3 dib white link pointer bg-dark-green hover-bg-dark-blue">ΑΠΟΣΤΟΛΗ</button>
+            <button type="submit" class="mono br-pill bw0 pa3 dib white link pointer bg-dark-green hover-bg-dark-blue">{{ site.data.contact-form.submit }}</button>
         </form>
     </div>
 </section>

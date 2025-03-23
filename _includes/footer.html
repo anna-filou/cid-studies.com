@@ -11,11 +11,15 @@
 
     {% assign data = site.data.info %}
     <div class="flex flex-column flex-row-l items-end fw3 w-50-l">
-      <a href="tel:{{ data.country-code }}{{ data.phone | remove: ' ' }}" class="f4 w-50-l mb3 mb0-l link dim">
-        <span class="o-60">{{ data.country-code }}</span> {{ data.phone }}
+      <a
+        href="tel:{{ data.country-code }}{{ data.phone | remove: ' ' }}"
+        class="f4 w-50-l mb3 mb0-l link dim"
+      >
+        <span class="o-60">{{ data.company.country-code }}</span> {{
+        data.company.phone }}
       </a>
       <a href="mailto:{{ data.email }}" class="f4 w-50-l link dim">
-        {{ data.email }}
+        {{ data.company.email }}
       </a>
     </div>
   </div>
@@ -23,11 +27,9 @@
   <hr />
 
   <div class="flex flex-column flex-row-l items-end-l">
-    <div class="w-50-l f4-ns fw5 mb3 mb0-l">
-      {{ data.company-name }}
-    </div>
-    
-    <div class="w-50-l f4-ns">{{ data.company-address }}</div>
+    <div class="w-50-l f4-ns fw5 mb3 mb0-l">{{ data.company.name }}</div>
+
+    <div class="w-50-l f4-ns">{{ data.company.address }}</div>
   </div>
 
   <hr />
@@ -37,14 +39,22 @@
       <div class="flex flex-column w-50-ns mr3-ns">
         <h3>ΕΤΑΙΡΕΙΑ</h3>
         {% for link in data.footer-links %}
-        <a href="{{ link.url }}" class="lh-title mb3 no-underline brand underline-hover">{{ link.title }}</a>
+        <a
+          href="{{ link.url }}"
+          class="lh-title mb3 no-underline brand underline-hover"
+          >{{ link.title }}</a
+        >
         {% endfor %}
       </div>
 
       <div class="flex flex-column w-50-ns mr3-l">
         <h3>ΥΠΗΡΕΣΙΕΣ</h3>
         {% for service in site.services %}
-          <a href="{{ service.url }}" class="lh-title mb3 no-underline brand underline-hover">{{ service.title }}</a>
+        <a
+          href="{{ service.url }}"
+          class="lh-title mb3 no-underline brand underline-hover"
+          >{{ service.title }}</a
+        >
         {% endfor %}
       </div>
     </div>
@@ -60,7 +70,8 @@
 
   <div class="flex flex-column flex-row-l items-start">
     <div class="w-50-l o-70 mb3 mb0-l">
-      © 2024–{{ site.time | date: '%Y' }} | Chemical Infrastructure Development Studies
+      © 2024–{{ site.time | date: '%Y' }} | Chemical Infrastructure Development
+      Studies
     </div>
     <div class="w-100 w-50-l flex justify-between">
       <!-- <a href="" class="link underline-hover">LinkedIn</a> -->
