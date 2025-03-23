@@ -33,42 +33,45 @@ layout: default
   </div>
 </section>
 
-{% comment %} <div class="container bg-yellow">
+{% comment %}
+<div class="container bg-yellow">
   <div class="pa2 dn-ns">Mobile Default</div>
   <div class="pa2 dn db-ns dn-l">Medium -NS</div>
   <div class="pa2 dn db-l">Desktop -L</div>
-</div> {% endcomment %}
-
-{% include services.html %} 
-
-{% include sectors.html %}
+</div>
+{% endcomment %} {% include services.html %} {% include sectors.html %}
 
 <section class="container-width flex flex-column flex-row-l bt-l b--brand">
   <div class="w-50-l pb5 pa3 pa4-ns pr5-l">
-    <h2 class="f2 fw5 mt0 mb5 mb7-l">Φέρνουμε αποτελέσματα</h2>
+    <h2 class="f2 fw5 mt0 mb5 mb7-l">{{ site.data.index.case-study.title }}</h2>
     <div class="grid">
-      {% assign case_study = site.pages | where: "name", "case-study.md" | first %}
-      {% for stat in case_study.stats %}
-        <div class="flex flex-column bt bw2 b--green">
-          <div class="secondary fw5 mt3 mb2">{{ stat.title }}</div>
-          <div class="fw5 f1">{{ stat.stat }}</div>
-        </div>
+      {% assign case_study = site.pages | where: "name", "case-study.md" | first
+      %} {% for stat in case_study.stats %}
+      <div class="flex flex-column bt bw2 b--green">
+        <div class="secondary fw5 mt3 mb2">{{ stat.title }}</div>
+        <div class="fw5 f1">{{ stat.stat }}</div>
+      </div>
       {% endfor %}
     </div>
   </div>
   <div class="w-50-l bl-l b--brand flex flex-column pa3 pa0-l">
-    <div class="w-100 vh-50 h-100-l cover bg-center" style="background-image: url('/assets/images/plant.webp');">
-    </div>
+    <div
+      class="w-100 vh-50 h-100-l cover bg-center"
+      style="background-image: url('/assets/images/plant.webp')"
+    ></div>
     <div class="mv4 mv0-l pa4-l">
       <p class="lh-copy secondary fw5 mt0">
-        Μειώσεις στις μετρούμενες παραμέτρους που παρατηρήθηκαν—από το
-        πιστοποιημένο (ISO17025) χημείο της εγκατάστασης—μετά από πιλοτική
-        εφαρμογή 30 ημερών στην μονάδα κατεργασίας υγρών αποβλήτων στο
-        διυλιστήριο των Ελληνικών Πετρελαίων στα Διαβατά Θεσσαλονίκης.
+        {{ site.data.index.case-study.description }}
       </p>
-      <!-- <a href="" class="b nowrap mr4 mt4 link dim bb bw2 b--brand f5 fw7"
-        >Διαβάστε το case study →</a
-      > -->
+      {% if site.data.index.case-study.text and
+      site.data.index.case-study.cta_url %}
+      <a
+        href="{{ site.data.index.case-study.cta_url }}"
+        class="b nowrap mr4 mt4 link dim bb bw2 b--brand f5 fw7"
+      >
+        {{ site.data.index.case-study.text }}
+      </a>
+      {% endif %}
     </div>
   </div>
 </section>
@@ -77,29 +80,29 @@ layout: default
   <div class="w-50-l flex items-center bg-secondary">
     <img class="w-100" src="/assets/images/graphic.svg" />
   </div>
-  <div class="w-50-l ph3 ph0-ns pa4-l flex flex-column justify-between h-auto bt bt-0-l bl-l b--brand">
-    <h2 class="f2 fw5 mv5 mt0-l">Η Eταιρεία</h2>
+  <div
+    class="w-50-l ph3 ph0-ns pa4-l flex flex-column justify-between h-auto bt bt-0-l bl-l b--brand"
+  >
+    <h2 class="f2 fw5 mv5 mt0-l">{{ site.data.index.company.title }}</h2>
     <div>
       <div class="pb3 pb4-l">
         <a
-          href="/about"
+          href="{{ site.data.index.about.cta_url }}"
           class="b nowrap mr4 link dim bb bw2 b--brand f4 fw7"
-          >Σχετικά με εμάς →</a
+          >{{ site.data.index.about.cta_text }}</a
         >
         <p class="lh-copy secondary fw5">
-          Συμβάλλουμε στην βελτιστοποίηση των διαδικασιών επεξεργασίας λυμάτων και στην διαχείρηση της μονάδας σας με τον πλέον αποτελεσματικό και βιώσιμο τρόπο ενόψει των ολοένα αυστηρότερων περιβαλλοντικών νόμων και απαιτήσεων.
+          {{ site.data.index.about.description }}
         </p>
       </div>
       <div>
         <a
-          href="/quality-policy"
+          href="{{ site.data.index.quality-policy.cta_url }}"
           class="b nowrap mr4 link dim bb bw2 b--brand f4 fw7"
-          >Πολιτική Ποιότητας →</a
+          >{{ site.data.index.quality-policy.cta_text }}</a
         >
         <p class="lh-copy secondary fw5">
-          Η λειτουργία της επιχείρησης Chemical infrastructure Development
-          Studies διέπεται από τις αρχές του Συστήματος Διαχείρισης Ποιότητας
-          που συντάχθηκε βάσει του προτύπου ISO 9001:2015.
+          {{ site.data.index.quality-policy.description }}
         </p>
       </div>
     </div>
