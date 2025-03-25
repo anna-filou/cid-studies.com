@@ -3,21 +3,21 @@
     <h2 class="f2 fw5 mv0">{{ site.data.news.latest }}</h2>
     <div class="dn db-l flex-auto bg-black-10 bar"></div>
     <a
-      href="{{ site.data.news.link }}"
+      href="{{ site.data.news.section-link.url }}"
       class="link dim b pb2 bb bw2 b--brand nowrap"
     >
-      {{ site.data.news.link-title }}
+      {{ site.data.news.section-link.title }}
     </a>
   </div>
   <div class="flex flex-column flex-row-l gap4">
     {% for post in site.data.news.posts limit: 2 %}
-      <div class="bg-secondary pa3 pa4-ns mb4 bt bw3 b--accent">
-        <h3 class="f4 fw6 mt0 mb5 lh-title">{{ post.title }}</h3>
-        <div class="flex justify-between">
-          <div class="mv0">{{ post.date | date: "%d/%m/%Y" }}</div>
-          <a href="{{ post.link }}" class="link dim b">{{ post.link_text }} ↗</a>
-        </div>
+    <div class="bg-secondary pa3 pa4-ns mb4 bt bw3 b--accent">
+      <h3 class="f4 fw6 mt0 mb5 lh-title">{{ post.title }}</h3>
+      <div class="flex justify-between">
+        <div class="mv0">{{ post.date | date: "%d/%m/%Y" }}</div>
+        <a href="{{ post.link }}" class="link dim b">{{ post.link_text }} ↗</a>
       </div>
+    </div>
     {% endfor %}
   </div>
 </section>

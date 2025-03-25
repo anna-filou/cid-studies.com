@@ -1,0 +1,7 @@
+service:
+  title: ← Υπηρεσιες
+  url: /services
+
+services:
+  title: Υπηρεσίες
+  cta-title: Δείτε&nbsp;αναλυτικά&nbsp;→
