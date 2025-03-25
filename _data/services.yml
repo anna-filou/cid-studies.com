@@ -4,4 +4,6 @@ service:
 
 services:
   title: Υπηρεσίες
-  cta-title: Δείτε&nbsp;αναλυτικά&nbsp;→
+  cta:
+    title: Δείτε&nbsp;αναλυτικά&nbsp;→
+    url: /services

@@ -1,0 +1,13 @@
+contact:
+  title: ΕΤΑΙΡΕΙΑ
+
+services:
+  title: ΥΠΗΡΕΣΙΕΣ
+
+sectors:
+  title: ΤΟΜΕΙΣ
+  url: /sectors
+
+privacy-policy:
+  title: Privacy Policy
+  url: /privacy-policy
