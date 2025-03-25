@@ -1,6 +1,6 @@
 <div class="container-width">
   <nav class="flex items-center justify-between pl3 pl4-ns">
-    <a href="/" class="flex w5 mr3 grow">
+    <a href="/{{page.lang}}" class="flex w5 mr3 grow">
       <img
         src="/assets/images/cid-logo.svg"
         alt="CID Logo"
@@ -10,18 +10,29 @@
     </a>
     <div class="navlinks">
       {% for link in site.data.navlinks %}
-      <a
-        href="{{ link.url }}"
-        class="hover-black underline-hover {{ link.class }}"
-      >
-        {{ link.title }}
-      </a>
+        {% if link.url == '/lang-switch' %}
+          <a href="/{% if page.lang == 'en' %}el{% else %}en{% endif %}/{{ page.ref }}" class="{{ link.class }}">
+            {{ link.title[page.lang] }}
+          </a>
+        {% else %}
+          <a href="/{{page.lang}}/{{ link.url }}" class="{{ link.class }}">
+            {{ link.title[page.lang] }}
+          </a>
+        {% endif %}
       {% endfor %}
     </div>
     <a href="/menu" class="pa2-5 bg-brand menu link" role="button">menu</a>
     <div class="menu-open">
       {% for link in site.data.navlinks %}
-      <a href="{{link.url}}" class="pa2-5 {{link.class}}">{{link.title}}</a>
+        {% if link.url == '/lang-switch' %}
+          <a href="/{% if page.lang == 'en' %}el{% else %}en{% endif %}/{{ page.ref }}" class="{{ link.class }}">
+            {{ link.title[page.lang] }}
+          </a>
+        {% else %}
+          <a href="/{{page.lang}}/{{ link.url }}" class="pa2-5 {{ link.class }}">
+            {{ link.title[page.lang] }}
+          </a>
+        {% endif %}
       {% endfor %}
     </div>
   </nav>

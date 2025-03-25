@@ -1,8 +1,16 @@
-heading: Eίστε σε καλά χέρια
-content: Η εμπειρία μας και η άρτια τεχνική μας κατάρτιση στην επεξεργασία των λυμάτων και στην απολύμανση είναι η εγγύηση ότι μπορούμε να σας προσφέρουμε τις πλέον καινοτόμες βιώσιμες λύσεις μειώνοντας το περιβαλλοντικό σας αποτύπωμα και συμβάλλοντας στην κυκλική οικονομία για ένα βιώσιμο μέλλον.
+heading: 
+  en: You're in good hands
+  el: Είστε σε καλά χέρια
+content: 
+  en: Our experience and advanced technical training in wastewater treatment and disinfection are the guarantee that we can offer you the most innovative sustainable solutions, reducing your environmental footprint and contributing to the circular economy for a sustainable future.
+  el: Η εμπειρία μας και η άρτια τεχνική μας κατάρτιση στην επεξεργασία των λυμάτων και στην απολύμανση είναι η εγγύηση ότι μπορούμε να σας προσφέρουμε τις πλέον καινοτόμες βιώσιμες λύσεις μειώνοντας το περιβαλλοντικό σας αποτύπωμα και συμβάλλοντας στην κυκλική οικονομία για ένα βιώσιμο μέλλον.
 link1:
-  title: επικοινωνηστε μαζι μας →
-  url: /contact
+  title: 
+    en: Contact us →
+    el: επικοινωνηστε μαζι μας →
+  url: contact
 # link2:
-#   title: δειτε τα ενημερωτικα μας φυλλαδια
-#   url: /downloads
+#   title: 
+#     en: See our newsletters
+#     el: δειτε τα ενημερωτικα μας φυλλαδια
+#   url: downloads

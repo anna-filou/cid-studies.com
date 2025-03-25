@@ -1,12 +1,12 @@
 <section class="container pv5">
   <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb5">
-    <h2 class="f2 fw5 mv0">{{ site.data.sectors.title }}</h2>
+    <h2 class="f2 fw5 mv0">{{ site.data.sectors.title[page.lang] }}</h2>
     <div class="dn db-l flex-auto bg-black-10 bar"></div>
     <a
-      href="{{ site.data.sectors.link }}"
+      href="/{{page.lang}}/{{ site.data.sectors.link }}"
       class="link dim b pb2 bb bw2 b--brand nowrap"
     >
-      {{ site.data.sectors.link-title }}
+      {{ site.data.sectors.link-title[page.lang] }}
     </a>
   </div>
   <div>
@@ -18,7 +18,7 @@
           style="background-image: url('{{ sector.image-1 }}'); background-size: cover; background-position: center;"
         ></div>
         <div class="pa3 bg-secondary">
-          <h3 class="fw5 ma0 mb2 lh-copy">{{ sector.title }}</h3>
+          <h3 class="fw5 ma0 mb2 lh-copy">{{ sector.title[page.lang] }}</h3>
         </div>
       </div>
       {% endfor %}

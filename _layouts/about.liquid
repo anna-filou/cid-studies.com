@@ -17,7 +17,7 @@ layout: default
 
   <div class="w-30-ns min-h-100 b--brand relative">
     <div class="sticky mono brand pt4-ns">
-      {% assign headings = page.content | split: '
+      {% assign headings = site.data.about.content[page.lang] | split: '
 #' %}
       {% for heading in headings %}
           {% assign title = heading | split: '
@@ -31,7 +31,7 @@ layout: default
   </div>
 
   <article class="lh-copy mw8 w-60-ns pl5-ns">
-    {{ content }}
+    {{ site.data.about.content[page.lang] | markdownify }}
   </article>
   
 </section>

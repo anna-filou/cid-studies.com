@@ -1,19 +1,19 @@
-<!-- ---
+---
 title: Privacy Policy
 layout: article
 lang: en
 ref: privacy-policy
---- -->
+---
 
 ## Owner and Data Controller
 
-**{{ site.data.info.company-name }}**
+**{{ site.data.info.company.name[page.lang] }}**
 
-{{ site.data.info.company-address }}
+{{ site.data.info.company.address[page.lang] }}
 
 
 
-Owner’s contact email: [{{ site.data.info.email }}](mailto:{{ site.data.info.email }})
+Owner’s contact email: [{{ site.data.info.company.email }}](mailto:{{ site.data.info.company.email }})
 
 ## Personal Information of Visitors
 

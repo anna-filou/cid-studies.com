@@ -4,11 +4,11 @@ layout: default
 
 <section class="pv5 container flex flex-column flex-row-l gap5">
     <div class="items-start w-50-l w-100 mb3">
-        <h2 class="f1 fw4 ma0 brand">{{site.data.sectors.title}}</h2>
+        <h2 class="f1 fw4 ma0 brand">{{site.data.sectors.title[page.lang]}}</h2>
     </div>
     <div class="w-50-l w-100">
-        <p class="lh-copy mt2 mb4">{{site.data.sectors.description}}</p>
-        <a class="b-brand bb bw2 pb2 dim link nowrap mono b" href="{{site.data.sectors.cta.url}}">{{site.data.sectors.cta.title}}</a>
+        <p class="lh-copy mt2 mb4">{{site.data.sectors.description[page.lang]}}</p>
+        <a class="b-brand bb bw2 pb2 dim link nowrap mono b" href="/{{page.lang}}/{{site.data.sectors.cta.url}}">{{site.data.sectors.cta.title[page.lang]}}</a>
     </div>
 </section>
 
@@ -19,11 +19,11 @@ layout: default
         <div class="container pv5">
             <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb3">
                 <div class="f3 fw3 mv0 secondary o-50">{{ forloop.index | prepend: '0' }}</div>
-                <h2 class="f3 fw5 mv0 nowrap-l">{{ sector.title }}</h2>
+                <h2 class="f3 fw5 mv0 nowrap-l">{{ sector.title[page.lang] }}</h2>
                 <div class="dn db-l flex-auto bg-black-10 bar"></div>
             </div>
             <div class="fw4 secondary ml4-l pl3-l lh-copy list ">
-                <p class="mb4 mw7">{{ sector.description }}</p>
+                <p class="mb4 mw7">{{ sector.description[page.lang] }}</p>
                 <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb4">
                     <div class="w-100 w-50-l">
                         <div class="aspect-ratio aspect-ratio--8x5" style="background-image: url('{{ sector.image-1 }}'); background-size: cover; background-position: center;"></div>

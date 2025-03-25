@@ -1,46 +1,76 @@
-title: Επικοινωνία
-description: Η Chemical Infrastructure Development Studies ιδρύθηκε το 2019, έχοντας ως όραμα την παροχή ολοκληρωμένων συμβουλευτικών υπηρεσιών στις επιχειρήσεις, με στόχο τη διαρκή εκπλήρωση των αναγκών τους και την ενίσχυση της βιώσιμης ανάπτυξής τους.
+title: 
+  en: "Contact"
+  el: "Επικοινωνία"
+description: 
+  en: "Chemical Infrastructure Development Studies was founded in 2019 with the vision of providing comprehensive consulting services to businesses, aiming to continuously meet their needs and enhance their sustainable development."
+  el: "Η Chemical Infrastructure Development Studies ιδρύθηκε το 2019, έχοντας ως όραμα την παροχή ολοκληρωμένων συμβουλευτικών υπηρεσιών στις επιχειρήσεις, με στόχο τη διαρκή εκπλήρωση των αναγκών τους και την ενίσχυση της βιώσιμης ανάπτυξής τους."
 
 fields:
   - name: "Name"
-    label: "Όνομα *"
+    label: 
+      en: "Name *"
+      el: "Όνομα *"
     type: "text"
     required: true
   - name: "Company"
-    label: "Εταιρεία *"
+    label: 
+      en: "Company *"
+      el: "Εταιρεία *"
     type: "text"
     required: true
     group: "group1"
   - name: "Role"
-    label: "Θέση στην εταιρεία *"
+    label: 
+      en: "Role in the company *"
+      el: "Θέση στην εταιρεία *"
     type: "select"
     options:
       - value: ""
-        text: "Επιλέξτε θέση"
+        text: 
+          en: "Select role"
+          el: "Επιλέξτε θέση"
       - value: "Mechanic"
-        text: "Μελετητής/Μηχανικός"
+        text: 
+          en: "Mechanic/Engineer"
+          el: "Μελετητής/Μηχανικός"
       - value: "Supervisor"
-        text: "Τεχνικός Υπεύθυνος"
+        text: 
+          en: "Technical Supervisor"
+          el: "Τεχνικός Υπεύθυνος"
       - value: "Executive"
-        text: "Διοίκηση"
+        text: 
+          en: "Executive"
+          el: "Διοίκηση"
       - value: "Sales"
-        text: "Πωλήσεις"
+        text: 
+          en: "Sales"
+          el: "Πωλήσεις"
       - value: "Other"
-        text: "Άλλη"
+        text: 
+          en: "Other"
+          el: "Άλλη"
     required: true
     group: "group1"
   - name: "Phone number"
-    label: "Τηλέφωνο"
+    label: 
+      en: "Phone number"
+      el: "Τηλέφωνο"
     type: "tel"
     required: true
     group: "group2"
   - name: "Email"
-    label: "Email *"
+    label: 
+      en: "Email *"
+      el: "Email *"
     type: "email"
     required: true
     group: "group2"
   - name: "Message"
-    label: "Μήνυμα *"
+    label: 
+      en: "Message *"
+      el: "Μήνυμα *"
     type: "textarea"
     required: true
-submit: ΑΠΟΣΤΟΛΗ
+submit: 
+  en: "SUBMIT"
+  el: "ΑΠΟΣΤΟΛΗ"

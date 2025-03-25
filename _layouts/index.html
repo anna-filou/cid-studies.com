@@ -6,21 +6,21 @@ layout: default
   <!-- Left Content -->
   <div class="w-100 w-50-l pa3 pa4-ns flex flex-column justify-center">
     <h1 class="f3 f2-ns brand fw5 mt0-l mb4 lh-title">
-      {{ site.data.index.title }}
+      {{ site.data.index.title[page.lang] }}
     </h1>
 
-    <p class="lh-copy mv0 secondary">{{ site.data.index.description }}</p>
+    <p class="lh-copy mv0 secondary">{{ site.data.index.description[page.lang] }}</p>
 
     <div class="flex items-center flex-wrap mv4">
       <a
-        href="{{ site.data.index.cta_url }}"
+        href="/{{page.lang}}/{{ site.data.index.cta_url }}"
         class="ttu border-button-brand ph3 pv2 mono b nowrap mr4 link dim"
-        >{{ site.data.index.cta_text }}</a
+        >{{ site.data.index.cta_text[page.lang] }}</a
       >
       <a
-        href="{{ site.data.index.company_url }}"
+        href="/{{page.lang}}/{{ site.data.index.company_url }}"
         class="ttu border-bottom-brand dim mono b nowrap-ns link"
-        >{{ site.data.index.company_text }}</a
+        >{{ site.data.index.company_text[page.lang] }}</a
       >
     </div>
   </div>
@@ -39,11 +39,15 @@ layout: default
   <div class="pa2 dn db-ns dn-l">Medium -NS</div>
   <div class="pa2 dn db-l">Desktop -L</div>
 </div>
-{% endcomment %} {% include services.html %} {% include sectors.html %}
+{% endcomment %} 
+
+{% include services.html %} 
+
+{% include sectors.html %}
 
 <section class="container-width flex flex-column flex-row-l bt-l b--brand">
   <div class="w-50-l pb5 pa3 pa4-ns pr5-l">
-    <h2 class="f2 fw5 mt0 mb5 mb7-l">{{ site.data.index.case-study.title }}</h2>
+    <h2 class="f2 fw5 mt0 mb5 mb7-l">{{ site.data.index.case-study.title[page.lang] }}</h2>
     <div class="grid">
       {% assign case_study = site.pages | where: "name", "case-study.md" | first
       %} {% for stat in case_study.stats %}
@@ -61,7 +65,7 @@ layout: default
     ></div>
     <div class="mv4 mv0-l pa4-l">
       <p class="lh-copy secondary fw5 mt0">
-        {{ site.data.index.case-study.description }}
+        {{ site.data.index.case-study.description[page.lang] }}
       </p>
       {% if site.data.index.case-study.text and
       site.data.index.case-study.cta_url %}
@@ -83,26 +87,26 @@ layout: default
   <div
     class="w-50-l ph3 ph0-ns pa4-l flex flex-column justify-between h-auto bt bt-0-l bl-l b--brand"
   >
-    <h2 class="f2 fw5 mv5 mt0-l">{{ site.data.index.company.title }}</h2>
+    <h2 class="f2 fw5 mv5 mt0-l">{{ site.data.index.company.title[page.lang] }}</h2>
     <div>
       <div class="pb3 pb4-l">
         <a
-          href="{{ site.data.index.about.cta_url }}"
+          href="/{{page.lang}}/{{ site.data.index.about.cta_url }}"
           class="b nowrap mr4 link dim bb bw2 b--brand f4 fw7"
-          >{{ site.data.index.about.cta_text }}</a
+          >{{ site.data.index.about.cta_text[page.lang] }}</a
         >
         <p class="lh-copy secondary fw5">
-          {{ site.data.index.about.description }}
+          {{ site.data.index.about.description[page.lang] }}
         </p>
       </div>
       <div>
         <a
-          href="{{ site.data.index.quality-policy.cta_url }}"
+          href="/{{page.lang}}/{{ site.data.index.quality-policy.cta_url }}"
           class="b nowrap mr4 link dim bb bw2 b--brand f4 fw7"
-          >{{ site.data.index.quality-policy.cta_text }}</a
+          >{{ site.data.index.quality-policy.cta_text[page.lang] }}</a
         >
         <p class="lh-copy secondary fw5">
-          {{ site.data.index.quality-policy.description }}
+          {{ site.data.index.quality-policy.description[page.lang] }}
         </p>
       </div>
     </div>

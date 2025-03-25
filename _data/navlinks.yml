@@ -1,15 +1,34 @@
-- title: εταιρεια
+- title:
+    en: About
+    el: εταιρεια
   url: /about
-- title: πολιτικη ποιοτητας
+- title:
+    en: Quality Policy
+    el: πολιτικη ποιοτητας
   url: /quality-policy
-- title: υπηρεσιες
+- title:
+    en: Services
+    el: υπηρεσιες
   url: /services
-- title: τομεις
+- title:
+    en: Sectors
+    el: τομεις
   url: /sectors
-- title: νεα
+- title:
+    en: News
+    el: νεα
   url: /news
-# - title: ληψεις
+# - title:
+#     en: Downloads
+#     el: ληψεις
 #   url: /downloads
-- title: επικοινωνια
+- title:
+    en: ΕΛΛΗΝΙΚΑ
+    el: ENGLISH
+  url: /lang-switch
+  class: pa2-5 bg-secondary nr4-ns
+- title:
+    en: Contact
+    el: επικοινωνια
   url: /contact
   class: pa2-5 bg-brand

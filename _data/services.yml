@@ -1,9 +1,24 @@
-service:
-  title: ← Υπηρεσιες
+back:
+  title:
+    en: Services
+    el: Υπηρεσιες
   url: /services
 
-services:
-  title: Υπηρεσίες
+page:
+  title: 
+    en: Services
+    el: Υπηρεσίες
   cta:
-    title: Δείτε&nbsp;αναλυτικά&nbsp;→
+    title: 
+      en: See details
+      el: Δείτε αναλυτικά
+
+include: 
+  title: 
+    en: Services
+    el: Εύρος υπηρεσιών
+  cta:
+    title: 
+      en: See details
+      el: Δείτε αναλυτικά
     url: /services

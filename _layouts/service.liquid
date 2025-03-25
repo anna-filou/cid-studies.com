@@ -5,31 +5,31 @@ layout: default
 <section class="container pv5 flex flex-column flex-row-ns">
 <div class="w-40-ns min-h-100 br-ns b--brand relative">
   <div class="f3 fw3 mv0 brand sticky">
-    <a href="{{site.data.services.service.title}}" class="ttu mono f5 link dim">{{site.data.services.service.title}}</a>
-    <h1 class="f2 fw5 mt2 mb0">{{ page.title }}</h1>
+    <a href="{{site.data.services.back.url}}" class="ttu mono f5 link dim">←&nbsp;{{site.data.services.back.title[page.lang]}}</a>
+    <h1 class="f2 fw5 mt2 mb0">{{ page.service-name[page.lang] }}</h1>
   </div>
   </div>
 
   <article class="lh-copy mw8 w-60-ns pl5-ns">
-    {{ content }}
+    {{ page.content[page.lang] | markdownify }}
   </article>
 </section>
 
 <section class="container pv5 bg-secondary bt b--brand">
 <div class="flex flex-wrap nl3 nr3">
     {% for service in site.services %}
-      {% if service.title != page.title %}
+      {% if service.service-name[page.lang] != page.service-name[page.lang] %}
       <div class="w-100 w-50-l ph3 mb4 mb0-ns">
         
         <div class="colored-divider {{ service.color_class | default: 'bg-brand' }} mb4"></div>
         <h3 class="f3 fw5 mt0 mb3">
-            <a href="{{ service.url }}" class="link primary lh-title dim">
-              {{ service.title }}&nbsp;→
+            <a href="/{{page.lang}}{{ service.url }}" class="link primary lh-title dim">
+              {{ service.service-name[page.lang] }}&nbsp;→
             </a>
         </h3>
 
         <ul class="lh-copy secondary list pl0">
-          {% for detail in service.details %}
+          {% for detail in service.details[page.lang] %}
             <li class="mb2">
               {{ detail }}
             </li>

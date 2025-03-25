@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="container pv5 brand">
-  <h1 class="f1 fw5 mv0">{{site.data.services.services.title}}</h1>
+  <h1 class="f1 fw5 mv0">{{site.data.services.page.title[page.lang]}}</h1>
 </section>
 <section>
 
@@ -12,14 +12,14 @@ layout: default
     <div class="container pv5">
       <div class="flex flex-column flex-row-l items-start items-center-l gap4 mb4">
         <div class="f3 fw3 mv0 secondary o-50">{{ forloop.index | prepend: '0' }}</div>
-        <h2 class="f3 fw5 mv0 nowrap-l">{{ service.title }}</h2>
+        <h2 class="f3 fw5 mv0 nowrap-l">{{ service.service-name[page.lang] }}</h2>
         <div class="dn db-l flex-auto bg-black-10 bar"></div>
-        <a href="{{ service.url }}" class="link dim b pb2 bb bw2 b--brand nowrap">
-          {{site.data.services.services.cta.title}}
+        <a href="/{{page.lang}}/{{ service.url }}" class="link dim b pb2 bb bw2 b--brand nowrap">
+          {{site.data.services.page.cta.title[page.lang]}}
         </a>
       </div>
       <div class="secondary ml4-l pl3-l mw8 lh-copy list">
-          {% for detail in service.details %}
+          {% for detail in service.details[page.lang] %}
             <li class="mb2 pl1">
               {{ detail }}
             </li>

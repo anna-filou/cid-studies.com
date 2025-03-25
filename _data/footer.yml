@@ -1,13 +1,38 @@
 contact:
-  title: ΕΤΑΙΡΕΙΑ
+  title:
+    en: COMPANY
+    el: ΕΤΑΙΡΕΙΑ
+  links:
+  - title:
+      en: Contact
+      el: Επικοινωνία
+    url: contact
+  - title:
+      en: About Us
+      el: Σχετικά με εμάς
+    url: about
+  - title:
+      en: Quality Policy
+      el: Πολιτική Ποιότητας
+    url: quality-policy
+  - title:
+      en: News
+      el: Νέα
+    url: news
 
 services:
-  title: ΥΠΗΡΕΣΙΕΣ
+  title:
+    en: SERVICES
+    el: ΥΠΗΡΕΣΙΕΣ
 
 sectors:
-  title: ΤΟΜΕΙΣ
-  url: /sectors
+  title:
+    en: SECTORS
+    el: ΤΟΜΕΙΣ
+  url: sectors
 
 privacy-policy:
-  title: Privacy Policy
-  url: /privacy-policy
+  title:
+    en: Privacy Policy
+    el: Πολιτική Απορρήτου
+  url: privacy-policy

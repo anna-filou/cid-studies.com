@@ -1,20 +1,38 @@
-title: Νέα
-description: Σας βοηθάμε να βελτιστοποιήσετε τις διαδικασίες επεξεργασίας νερού και να διαχειριστείτε τη μονάδα σας με πιο αποτελεσματικό και βιώσιμο τρόπο ενόψει των ολοένα και πιο αυστηρών κανονισμών και των περιβαλλοντικών απαιτήσεων.
-latest: Τελευταία νέα
+title: 
+  en: News
+  el: Νέα
+description: 
+  en: We help you optimize water processing procedures and manage your plant more efficiently and sustainably in light of increasingly stringent regulations and environmental requirements.
+  el: Σας βοηθάμε να βελτιστοποιήσετε τις διαδικασίες επεξεργασίας νερού και να διαχειριστείτε τη μονάδα σας με πιο αποτελεσματικό και βιώσιμο τρόπο ενόψει των ολοένα και πιο αυστηρών κανονισμών και των περιβαλλοντικών απαιτήσεων.
+latest: 
+  en: Latest News
+  el: Τελευταία νέα
 section-link:
-  title: "Περισσότερα νέα"
-  url: "/news"
+  title: 
+    en: More News
+    el: Περισσότερα νέα
+  url: "news"
 cta:
-  title: ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ →
-  url: /contact
+  title: 
+    en: CONTACT US →
+    el: ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ →
+  url: contact
 posts:
-  - title: Όλα όσα πρέπει να ξέρετε για τους περιβαλλοντικούς κανονισμούς της Ευρωπαϊκής Ένωσης
+  - title: 
+      en: Everything you need to know about the European Union's environmental regulations
+      el: Όλα όσα πρέπει να ξέρετε για τους περιβαλλοντικούς κανονισμούς της Ευρωπαϊκής Ένωσης
     description:
+      en:
+      el:
     date: 2024-04-01
     link: https://www.europarl.europa.eu/factsheets/el/sheet/74/%CF%80%CF%81%CE%BF%CF%83%CF%84%CE%B1%CF%83%CE%B9%CE%B1-%CE%BA%CE%B1%CE%B9-%CE%B4%CE%B9%CE%B1%CF%87%CE%B5%CE%B9%CF%81%CE%B9%CF%83%CE%B7-%CF%84%CF%89%CE%BD-%CF%85%CE%B4%CE%B1%CF%84%CF%89%CE%BD
     link_text: europa.eu
-  - title: Ποια είναι η τελευταία κοινοτική οδηγία για την επαναχρησιμοποίηση του νερού;
+  - title: 
+      en: What is the latest EU directive on water reuse?
+      el: Ποια είναι η τελευταία κοινοτική οδηγία για την επαναχρησιμοποίηση του νερού;
     description:
+      en:
+      el:
     date: 2020-06-05
     link: https://eur-lex.europa.eu/legal-content/EL/TXT/HTML/?uri=CELEX:32020R0741
     link_text: europa.eu

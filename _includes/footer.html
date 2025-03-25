@@ -12,13 +12,13 @@
     {% assign data = site.data.info %}
     <div class="flex flex-column flex-row-l items-end fw3 w-50-l">
       <a
-        href="tel:{{ data.country-code }}{{ data.phone | remove: ' ' }}"
+        href="tel:{{ data.company.country-code }}{{ data.company.phone | remove: ' ' }}"
         class="f4 w-50-l mb3 mb0-l link dim"
       >
         <span class="o-60">{{ data.company.country-code }}</span> {{
         data.company.phone }}
       </a>
-      <a href="mailto:{{ data.email }}" class="f4 w-50-l link dim">
+      <a href="mailto:{{ data.company.email }}" class="f4 w-50-l link dim">
         {{ data.company.email }}
       </a>
     </div>
@@ -27,9 +27,9 @@
   <hr />
 
   <div class="flex flex-column flex-row-l items-end-l">
-    <div class="w-50-l f4-ns fw5 mb3 mb0-l">{{ data.company.name }}</div>
+    <div class="w-50-l f4-ns fw5 mb3 mb0-l">{{ data.company.name[page.lang] }}</div>
 
-    <div class="w-50-l f4-ns">{{ data.company.address }}</div>
+    <div class="w-50-l f4-ns">{{ data.company.address[page.lang] }}</div>
   </div>
 
   <hr />
@@ -37,31 +37,31 @@
   <div class="flex flex-column flex-row-l items-start">
     <div class="flex flex-column flex-row-ns w-100 w-50-l">
       <div class="flex flex-column w-50-ns mr3-ns">
-        <h3>{{site.data.footer.contact.title}}</h3>
-        {% for link in data.footer-links %}
+        <h3>{{site.data.footer.contact.title[page.lang]}}</h3>
+        {% for link in site.data.footer.contact.links %}
         <a
-          href="{{ link.url }}"
+          href="/{{page.lang}}/{{ link.url }}"
           class="lh-title mb3 no-underline brand underline-hover"
-          >{{ link.title }}</a
+          >{{ link.title[page.lang] }}</a
         >
         {% endfor %}
       </div>
 
       <div class="flex flex-column w-50-ns mr3-l">
-        <h3>{{site.data.footer.services.title}}</h3>
+        <h3>{{site.data.footer.services.title[page.lang]}}</h3>
         {% for service in site.services %}
         <a
-          href="{{ service.url }}"
+          href="/{{page.lang}}{{ service.url }}"
           class="lh-title mb3 no-underline brand underline-hover"
-          >{{ service.title }}</a
+          >{{ service.service-name[page.lang] }}</a
         >
         {% endfor %}
       </div>
     </div>
     <div class="flex flex-column w-100 w-50-l">
-      <h3><a href="/sectors">{{site.data.footer.sectors.title}}</a></h3>
+      <h3><a href="/{{page.lang}}/{{site.data.footer.sectors.url}}">{{site.data.footer.sectors.title[page.lang]}}</a></h3>
       {% for sector in site.data.sectors.sectors %}
-      <div class="mb3">{{ sector.title }}</div>
+      <div class="mb3">{{ sector.title[page.lang] }}</div>
       {% endfor %}
     </div>
   </div>
@@ -70,12 +70,12 @@
 
   <div class="flex flex-column flex-row-l items-start">
     <div class="w-50-l o-70 mb3 mb0-l">
-      © 2024–{{ site.time | date: '%Y' }} | {{site.data.info.company.name}}
+      © 2024–{{ site.time | date: '%Y' }} | {{site.data.info.company.name[page.lang]}}
     </div>
     <div class="w-100 w-50-l flex justify-between">
       <!-- <a href="" class="link underline-hover">LinkedIn</a> -->
-      <a href="{{site.data.footer.privacy-policy.url}}" class="link primary dim"
-        >{{site.data.footer.privacy-policy.title}}</a
+      <a href="/{{page.lang}}/{{site.data.footer.privacy-policy.url}}" class="link primary dim"
+        >{{site.data.footer.privacy-policy.title[page.lang]}}</a
       >
     </div>
   </div>

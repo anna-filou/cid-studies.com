@@ -5,7 +5,7 @@ collections:
   services:
     title: Services
     output: true
-    permalink: /services/:title
+    permalink: /services/:path/
 baseurl: ''
 url: https://cid-studies.com
 permalink: pretty

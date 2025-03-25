@@ -1,26 +1,48 @@
-title: "Ολιστικές λύσεις για την επαναχρησιμοποίηση του νερού"
-description: "Σας προσφέρουμε τις καινοτόμες λύσεις, για την εγκατάσταση επεξεργασίας των λυμάτων σας, προκειμένου να διαχειριστήτε την μονάδα σας με τον πιο αποτελεσματικό και βιώσιμο τρόπο ενόψει των ολοένα αυστηρότερων περιβαλλοντικών νόμων και απαιτήσεων."
-cta_text: "Επικοινωνια"
-cta_url: "/contact"
-company_text: "Η εταιρεια"
-company_url: "/about"
+title: 
+  en: "Holistic solutions for water reuse"
+  el: "Ολιστικές λύσεις για την επαναχρησιμοποίηση του νερού"
+description: 
+  en: "We offer innovative solutions for wastewater treatment plants, enabling you to manage your plant in the most efficient and sustainable way in view of the increasingly stringent environmental laws and requirements."
+  el: "Σας προσφέρουμε τις καινοτόμες λύσεις, για την εγκατάσταση επεξεργασίας των λυμάτων σας, προκειμένου να διαχειριστήτε την μονάδα σας με τον πιο αποτελεσματικό και βιώσιμο τρόπο ενόψει των ολοένα αυστηρότερων περιβαλλοντικών νόμων και απαιτήσεων."
+cta_text: 
+  en: "Contact"
+  el: "Επικοινωνια"
+cta_url: contact
+company_text: 
+  en: About us
+  el: Η εταιρεια
+company_url: about
 
 case-study:
-  title: "Φέρνουμε αποτελέσματα"
-  description: "Μειώσεις στις μετρούμενες παραμέτρους που παρατηρήθηκαν—από το πιστοποιημένο (ISO17025) χημείο της εγκατάστασης—μετά από πιλοτική εφαρμογή 30 ημερών στην μονάδα κατεργασίας υγρών αποβλήτων στο διυλιστήριο των Ελληνικών Πετρελαίων στα Διαβατά Θεσσαλονίκης."
+  title: 
+    en: "We Deliver Results"
+    el: "Φέρνουμε αποτελέσματα"
+  description: 
+    en: "Reductions in measured parameters observed—from the certified (ISO17025) laboratory of the facility—after a 30-day pilot application at the wastewater treatment plant at the Hellenic Petroleum refinery in Thessaloniki."
+    el: "Μειώσεις στις μετρούμενες παραμέτρους που παρατηρήθηκαν—από το πιστοποιημένο (ISO17025) χημείο της εγκατάστασης—μετά από πιλοτική εφαρμογή 30 ημερών στην μονάδα κατεργασίας υγρών αποβλήτων στο διυλιστήριο των Ελληνικών Πετρελαίων στα Διαβατά Θεσσαλονίκης."
 # text: "Διαβάστε το case study →"
 # cta_url: ""
 
 company:
-  title: "Η Eταιρεία"
+  title: 
+    en: "The Company"
+    el: "Η Eταιρεία"
   # image: "/assets/images/graphic.svg"
 
 about:
-  cta_text: "Σχετικά με εμάς →"
-  cta_url: "/about"
-  description: "Συμβάλλουμε στην βελτιστοποίηση των διαδικασιών επεξεργασίας λυμάτων και στην διαχείρηση της μονάδας σας με τον πλέον αποτελεσματικό και βιώσιμο τρόπο ενόψει των ολοένα αυστηρότερων περιβαλλοντικών νόμων και απαιτήσεων."
+  cta_text: 
+    en: "About Us →"
+    el: "Σχετικά με εμάς →"
+  cta_url: about
+  description: 
+    en: "We contribute to the optimization of wastewater treatment processes and the management of your facility in the most efficient and sustainable way in light of increasingly stringent environmental laws and requirements."
+    el: "Συμβάλλουμε στην βελτιστοποίηση των διαδικασιών επεξεργασίας λυμάτων και στην διαχείρηση της μονάδας σας με τον πλέον αποτελεσματικό και βιώσιμο τρόπο ενόψει των ολοένα αυστηρότερων περιβαλλοντικών νόμων και απαιτήσεων."
 
 quality-policy:
-  cta_text: "Πολιτική Ποιότητας →"
-  cta_url: "/quality-policy"
-  description: "Η λειτουργία της επιχείρησης Chemical infrastructure Development Studies διέπεται από τις αρχές του Συστήματος Διαχείρισης Ποιότητας που συντάχθηκε βάσει του προτύπου ISO 9001:2015."
+  cta_text: 
+    en: "Quality Policy →"
+    el: "Πολιτική Ποιότητας →"
+  cta_url: quality-policy
+  description: 
+    en: "The operation of the business Chemical Infrastructure Development Studies is governed by the principles of the Quality Management System drafted according to the ISO 9001:2015 standard."
+    el: "Η λειτουργία της επιχείρησης Chemical infrastructure Development Studies διέπεται από τις αρχές του Συστήματος Διαχείρισης Ποιότητας που συντάχθηκε βάσει του προτύπου ISO 9001:2015."

@@ -1,7 +1,7 @@
 ---
 title: Πολιτική Ποιότητας
 layout: article
-lang: en
+lang: el
 ref: quality-policy
 ---
 
