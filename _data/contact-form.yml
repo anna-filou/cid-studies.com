@@ -5,6 +5,9 @@ description:
   en: "Chemical Infrastructure Development Studies was founded in 2019 with the vision of providing comprehensive consulting services to businesses, aiming to continuously meet their needs and enhance their sustainable development."
   el: "Η Chemical Infrastructure Development Studies ιδρύθηκε το 2019, έχοντας ως όραμα την παροχή ολοκληρωμένων συμβουλευτικών υπηρεσιών στις επιχειρήσεις, με στόχο τη διαρκή εκπλήρωση των αναγκών τους και την ενίσχυση της βιώσιμης ανάπτυξής τους."
 
+name:
+  en: English Form
+  el: Greek Form
 fields:
   - name: "Name"
     label: 

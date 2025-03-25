@@ -42,7 +42,7 @@ layout: default
                 {{site.data.contact-form.description[page.lang]}}
             </p>
         </div>
-        <form class="flex flex-column">
+        <form name="{{site.data.contact-form.name[page.lang]}}" netlify class="flex flex-column">
             {% assign fields = site.data.contact-form.fields %}
             {% assign current_group = "" %}
 
