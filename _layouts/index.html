@@ -49,8 +49,9 @@ layout: default
   <div class="w-50-l pb5 pa3 pa4-ns pr5-l">
     <h2 class="f2 fw5 mt0 mb5 mb7-l">{{ site.data.index.case-study.title[page.lang] }}</h2>
     <div class="grid">
-      {% assign case_study = site.pages | where: "name", "case-study.md" | first
-      %} {% for stat in case_study.stats %}
+      {% assign case_study = site.pages | where: "name", "case-study.md" | where: "lang", page.lang | first %} 
+      
+      {% for stat in case_study.stats %}
       <div class="flex flex-column bt bw2 b--green">
         <div class="secondary fw5 mt3 mb2">{{ stat.title }}</div>
         <div class="fw5 f1">{{ stat.stat }}</div>
