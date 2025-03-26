@@ -198,6 +198,8 @@ textarea {
   gap: 1.5rem;
 }
 
+
+
 .bg-secondary {
   background-color: $bg-secondary;
 }
@@ -276,4 +278,18 @@ article {
 
 .sticky {
   position: sticky;
+}
+
+// NS media query
+
+@media screen and (min-width: 50em) { 
+  .gap2-ns {
+    gap: 0.5rem;
+  }
+  .gap3-ns {
+    gap: 1rem;
+  }
+  .gap4-ns {
+    gap: 1.5rem;
+  }
 }

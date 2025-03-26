@@ -31,18 +31,19 @@ layout: default
 
         <div>
             <p class="lh-copy secondary ttu ma0">{{data.address[page.lang]}}</p>
-            <p class="lh-copy ma0 pb4">{{ data.company.address[page.lang] }}</p>
+            <p class="lh-copy ma0">{{ data.company.address[page.lang] }}</p>
         </div>
     </div>
 
+    <hr class="db dn-ns mv5">
     <div class="flex flex-column w-two-thirds-ns">
         <div>
             <h1 class="brand ma0">{{site.data.contact-form.title[page.lang]}}</h1>
-            <p class="ma0 pv4-l pv3 lh-copy">
+            <p class="ma0 pt3 pb4 lh-copy">
                 {{site.data.contact-form.description[page.lang]}}
             </p>
         </div>
-        <form name="{{site.data.contact-form.name[page.lang]}}" netlify class="flex flex-column">
+        <form name="{{site.data.contact-form.name[page.lang]}}" class="flex flex-column" action="/{{page.lang}}/success" method="POST" netlify>
             {% assign fields = site.data.contact-form.fields %}
             {% assign current_group = "" %}
 
@@ -51,25 +52,25 @@ layout: default
                     {% if current_group != "" %}
                         </div> <!-- Close previous group -->
                     {% endif %}
-                    <div class="flex flex-column flex-row-ns gap3"> <!-- Start new group -->
+                    <div class="flex flex-column flex-row-ns gap3-ns"> <!-- Start new group -->
                     {% assign current_group = field.group %}
                 {% endif %}
 
-                <div class="mb3 w-100">
-                    <div class="flex flex-row items-center mr2 mb2">
+                <div class="mb4 mb3-ns w-100">
+                    <div class="flex flex-row items-center mr2 mb3 mb2-ns">
                         <label for="{{ field.name }}" class="db fw6 brand mr2">{{ field.label[page.lang] }}</label>
                         <div class="flex-auto bg-accent bar o-30"></div>
                     </div>
                     {% if field.type == "text" or field.type == "tel" or field.type == "email" %}
-                        <input type="{{ field.type }}" id="{{ field.name }}" name="{{ field.name }}" class="input-reset ba b--accent pa2 mb2 db w-100" {% if field.required %}required{% endif %}>
+                        <input type="{{ field.type }}" id="{{ field.name }}" name="{{ field.name }}" class=" input-reset ba b--accent pa2 db w-100" {% if field.required %}required{% endif %}>
                     {% elsif field.type == "select" %}
-                        <select id="{{ field.name }}" name="{{ field.name }}" class="input-reset ba b--accent pa2 mb2 db w-100 bg-white" {% if field.required %}required{% endif %}>
+                        <select id="{{ field.name }}" name="{{ field.name }}" class=" input-reset ba b--accent pa2 db w-100 bg-white" {% if field.required %}required{% endif %}>
                             {% for option in field.options %}
                                 <option value="{{ option.value }}" {% if option.value == "" %}disabled selected{% endif %}>{{ option.text[page.lang] }}</option>
                             {% endfor %}
                         </select>
                     {% elsif field.type == "textarea" %}
-                        <textarea id="{{ field.name }}" name="{{ field.name }}" class="input-reset ba b--accent pa2 mb2 db w-100" {% if field.required %}required{% endif %}></textarea>
+                        <textarea id="{{ field.name }}" name="{{ field.name }}" class=" input-reset ba b--accent pa2 db w-100" {% if field.required %}required{% endif %}></textarea>
                     {% endif %}
                 </div>
             {% endfor %}

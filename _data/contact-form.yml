@@ -59,7 +59,7 @@ fields:
       en: "Phone number"
       el: "Τηλέφωνο"
     type: "tel"
-    required: true
+    required: false
     group: "group2"
   - name: "Email"
     label: 

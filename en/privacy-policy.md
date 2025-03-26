@@ -17,7 +17,7 @@ Owner’s contact email: [{{ site.data.info.company.email }}](mailto:{{ site.dat
 
 ## Personal Information of Visitors
 
-**{{ site.data.info.company-name }}** (hereafter “we”, “us”) does not collect any personally identifiable information (hereafter “User Data”) regarding the website’s visitors (hereafter also “contacts”) by default, unless said visitors choose to email us directly or submit a quotation request through our online form (more details in the next section).
+**{{ site.data.info.company.name[page.lang] }}** (hereafter “we”, “us”) does not collect any personally identifiable information (hereafter “User Data”) regarding the website’s visitors (hereafter also “contacts”) by default, unless said visitors choose to email us directly or submit a quotation request through our online form (more details in the next section).
 
 We **do not sell** any of the information we receive from Visitors who choose to share it with us, and only use said information to conduct business with said Visitors OR in the case we are legally required to hold onto that information.
 
