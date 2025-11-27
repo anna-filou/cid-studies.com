@@ -32,5 +32,11 @@ end
 # do not have a Java counterpart.
 # gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
+# Ruby 3.4+ no longer auto-loads some standard libraries like csv, base64, logger.
+# They must be explicitly included in the Gemfile for Netlify.
+gem "csv"
+gem "base64"
+gem "logger"
+
 gem "webrick"
 # gem "did_you_mean"
